@@ -1,11 +1,9 @@
-![Knitting_Nest_Logo](https://user-images.githubusercontent.com/106862584/171993281-f9a8d8d3-9dd5-4dc2-a7dc-75e1d1194782.png)
-## Welcome To Knitting Nest!
-### Check Out Our Merchandise And More
-**[Home](Home_page.html)       [About Us](About_Us.html)        [Shop Now](Shop_Now.html)       [New Updates](New.html)        [Contact Us](Contact_Us.html)**
-
-
-
-
-
-   
-# Have a Great Day!
+<img  class="image1" style="width:10%;" src="Knitting_Nest_Logo.png" alt="Our Logo">
+<h1> Welcome To Knitting Nest! </h1>
+<h3> Check Out Our Merchandise And More </h3>
+<a href="Home_page.html">Home</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="About_Us.html">About Us</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Shop_Now.html">Shop Now</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="New.html">New Updates</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Contact_Us.html">Contact Us</a>
+<br>
+<br>
+<br>
+<br>
+<h2>Have A Great Day!</h2>

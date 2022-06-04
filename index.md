@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome To Knitting Nest!
 
 You can use the [editor on GitHub](https://github.com/Knitting-Nest/Knitting-Nest.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 

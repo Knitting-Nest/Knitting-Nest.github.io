@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+	<head>
+		<title> Knitting Nest </title>
+		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
+		<style>
+			html{
+				BORDER:5px dotted rgb(171, 74, 255);
+    				height:100%;
+     				BORDER-RADIUS:10px;
+     				PADDING:300 px;
+			}
+			body{
+         			background-image: url('Background_image.png');
+
+			}
+			A:LINK{
+            		FONT-SIZE:25px; 
+            		TEXT-DECORATION:NONE;
+			}
+			A:VISITED{
+                       COLOR:rgb(138, 32, 74);
+                       TEXT-ALIGN:center;
+			}
+			A:HOVER{
+                		COLOR:rgba(227, 84, 179, 0.87);
+                		TEXT-DECORATION:UNDERLINE;
+			}
+			A:ACTIVE{
+                		COLOR:rgb(123, 78, 138)
+			}
+			hr{
+    				border: 2px dotted rgb(107, 78, 102);
+			}
+			img.image2{
+				BORDER:5px dotted  rgb(171, 74, 255);
+     				BORDER-RADIUS:10px;
+     				PADDING:300 px;
+				width:50%;
+				BOX-SHADOW:6px 2px 4px 8px rgba(50, 0, 61, 0.35);
+			}
+			img.image1{
+				BORDER:5px dotted  rgb(171, 74, 255);
+				WIDTH:6%;
+				PADDING:300 px;
+				BORDER-RADIUS:200px;
+				position: fixed;
+   				top: 4%;
+			}
+			p.Copyright{
+				background-color:rgba(18, 7, 14, 0.55);
+				height: 30px;
+				width:1500px;
+				color:rgb(243, 242, 255);
+				position: fixed;
+   				top: 91%;
+                        left:1%;
+			}
+		</style>
+	</head>
+	<body>
+		<br>
+		<br>
+		<br>
+		<br>
+			&nbsp&nbsp&nbsp&nbsp&nbsp<img class="image1" src="Knitting_Nest_Logo.png" alt="Our Logo">
+		<center>
+		    <b>
+			<font face="Copperplate, Papyrus, fantasy">  
+			<a href="Home_page.html">Home</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="About_Us.html">About Us</a>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Shop_Now.html">Shop Now</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="New.html">New Updates</a>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Contact_Us.html">Contact Us</a>
+			</font>
+		    </b>  
+			<hr>
+			<br>
+			<br>
+			<br>
+			<br>
+			<img class="image2" src="Our_slogan.png" alt="Our Slogan">
+			<b>
+<font face="Copperplate, Papyrus, fantasy">
+			<p>Last Updated: 2nd June 2022</p>
+</font>
+			</b>
+			<i>
+			<p class="Copyright">©copyright Knitting Nest</p>
+			</i>
+		</center>
+	</body>
+</html>

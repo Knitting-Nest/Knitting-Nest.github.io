@@ -2,6 +2,7 @@
 	<head>
 		<title> Knitting Nest </title>
 		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
+
 		<style>
 			body{
          			background-image: url('Background_image13.png');
@@ -49,6 +50,70 @@
 				color:rgba(224, 109, 155, 0.99);
 				font-size:30px;
 			}
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 80%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	background-color:rgba(26, 6, 3, 0.45);
+BORDER-RADIUS:500px;
+
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::before, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+img.we{
+BORDER-RADIUS:50px;
+width:50%;
+height:60%;
+}
 		</style>
 	</head>
 	<body>
@@ -59,9 +124,11 @@
 			<img class="image1" src="Knitting_Nest_Logo.png" alt="Our Logo">
 		<center>
 		    <b>
+<!--rgb(214, 109, 144)-->
 			<font face="Copperplate, Papyrus, fantasy">  
 			<a href="Home_page.html">Home</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="About_Us.html">About Us</a>
-			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Shop_Now.html">Shop</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="New.html">Updates</a>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Shop_Now.html">Shop</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="New.html">Updates<sup style="color:red;font-size:14px;">New</sup></a>
 			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="Contact_Us.html">Contact Us</a>
 			</font>
 		    </b> 
@@ -70,38 +137,23 @@
 <br> 
 			<hr>
 			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+<br>
+      <img class="we" src="Phone_case.jpg" alt="Phone case">
+      <div class="container">
+        <h2 style="color:white;">Phone Case ₹450</h2>
+<br>
+      </div>
+    </div>
+  </div>
 		     <b>
 			<font face="Copperplate, Papyrus, fantasy">
-				<p class="p2">New Products Are In Progress And Will Be Updated Shortly ...</p>
+				<!--<p class="p2">New Products Are In Progress And Will Be Updated Shortly ...</p>-->
 		     </b>
 			</font>
-			<br>
-			<br>
-			<br>
 
-			<br>
-
-			<br>
-<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 			<i>
 			<p class="p1">© Knitting Nest</p>
 			</i>

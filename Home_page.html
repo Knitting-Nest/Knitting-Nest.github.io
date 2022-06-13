@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+	<head>
+		<title> Knitting Nest </title>
+		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
+		<style>
+			body{
+         			background-image: url('Background_image13.png');
+
+ 
+  font-family:Copperplate, Papyrus, fantasy;
+  background-size: cover;
+  background-attachment: fixed;
+			}
+
+
+			p.h12{
+				Text-SHADOW:6px 2px 4px 8px rgba(50, 0, 61, 0.35);
+				color:rgba(84, 49, 70, 0.66);
+				font-size:71px;
+			}
+			img.image1{
+
+				WIDTH:70px;
+
+				BORDER-RADIUS:200px;
+
+			}
+			p.Copyright{
+
+				background-color:rgba(18, 7, 14, 0.55);
+				height: 30px;
+				width:1500px;
+				color:rgb(243, 242, 255);
+				position: fixed;
+   				top: 91%;
+                        left:1%;
+
+			}
+			p.p2{
+color:rgba(77, 77, 77, 0.93);
+font-size:17px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar{
+  height: 80px;
+  width: 100%;
+  padding: 10px 30px;
+  background-color:rgba(59, 17, 27, 0.51);
+  position: relative;
+}
+.navbar .nav-header{
+  display: inline;
+}
+.navbar .nav-header .nav-logo{
+  display: inline-block;
+  margin-top: -7px;
+}
+.navbar .nav-links{
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar .nav-links a {
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 550;
+  color: white;
+}
+/* Hover effects */
+.navbar .nav-links a:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+ 
+/* responsive navbar toggle button */
+.navbar #nav-check, .navbar .nav-btn{
+  display: none;
+}
+ 
+@media (max-width:700px) {
+  .navbar .nav-btn{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 80px;
+    height: 70px;
+    padding: 25px;
+  }
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #eee;
+  }
+  .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
+    background-color: rgb(9, 14, 90);
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(95, 85, 99);
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    right: 0px;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+ 
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+ 
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  /* Responsive dropdown code */
+  .navbar .nav-links .dropdown, .navbar .nav-links .dropdown2 {
+    float: none;
+    width: 100%;
+  }
+  .navbar .nav-links .drop-content, .navbar .nav-links .drop-content2 {
+    position: relative;
+    background-color: rgb(220, 220, 250);
+    top: 0px;
+    left: 0px;
+  }
+  /* Text color */
+  .navbar .nav-links .drop-content a {
+    color: rgb(9, 14, 90);
+  }  
+ 
+}
+ 
+/* Dropdown menu CSS code */
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.drop-content, .drop-content2 {
+  display: none;
+  position: absolute;
+  background-color:rgb(95, 85, 99);
+  min-width: 120px;
+  font-size: 19px;
+  top: 34px;
+  z-index: 1;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* on hover show dropdown */
+.dropdown:hover .drop-content, .dropdown2:hover .drop-content2 {
+  display: block;
+}
+ .navbar .nav-links .loginBtn {
+    padding: 10px 40px ;
+    margin: 20px;
+    font-size:  18px;
+    font-weight: bold;
+    color: rgb(9, 14, 90);
+  }
+/* drondown links */
+.drop-content a {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgb(197, 197, 250);
+  display: block;
+  transition: all 0.5s ease !important;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgb(230, 230, 230);
+}
+.dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dropBtn2 i {
+  margin-left: 15px;
+}
+.navbar .nav-links .loginBtn{
+  display: inline-block;
+  padding: 5px 15px;
+  margin-left: 20px;
+  font-size: 17px;
+  color: rgb(9, 14, 90);
+}
+
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+.notification {
+
+
+  position: relative;
+  display: inline-block;
+
+}
+
+.notification:hover {
+  background: red;
+
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding:0px 5px;
+  border-radius: 100%;
+  background: red;
+  color: white;
+}
+
+.responsive {
+  width: 100%;
+  max-height: 100px;
+  height:100%;
+}
+img.sub{
+	height:90%;
+	width:95%;
+	max-height:250px;
+}
+
+
+
+		</style>
+	</head>
+	<body>
+  <div class="navbar">
+ 
+    <!-- Navbar logo -->
+    <div class="nav-header">
+      <div class="nav-logo">
+        <a href="#">
+			<img class="image1" src="Knitting_Nest_Logo.png" alt="Our Logo">
+        </a>
+      </div>
+    </div>
+
+
+    <!-- responsive navbar toggle button -->
+    <input type="checkbox" id="nav-check">
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+ 
+    <!-- Navbar items -->
+    <div class="nav-links">
+      <a href="Home_page.html">Home</a>
+
+ 
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <a class="dropBtn" href="#">About Us
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="About_Us.html">Our Journey</a>
+          <a href="Our_Customers.html">Our Customers</a>
+            </div>
+          </div>
+      <div class="dropdown">
+        <a class="dropBtn" href="#">Shop
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="Shop_Now.html">Menu</a>
+          <a href="Best_Sellers.html">Best Sellers</a>
+            </div>
+          </div>
+<a href="New.html" class="notification">
+  <span>Updates</span>
+  <span class="badge">4</span>
+</a>
+    
+          <a href="Contact_Us.html">Contact Us</a>
+      <a href="https://forms.office.com/r/bsVdRqBQfr"><button class="loginBtn">Order</button></a>
+ 
+
+ 
+  </div>
+
+		<center>
+
+<font fact="Copperplate, Papyrus, fantasy">
+
+<br>
+<br>
+<br>
+
+<br>
+<STRONG>
+<p class="h12">A STITCH away from you</p>
+</STRONG>
+
+
+<p class="p2" style="color:rgb(41, 45, 51);">We believe handmade is better.<br>Each of our products are handcrafted with love.</p>
+</font>
+
+<font face="Copperplate, Papyrus, fantasy">
+<br>
+<br>
+<br>
+<b>
+<p>Created By: Claire & Grace Fernandes</p>
+			<p>Last Updated: 13th June 2022</p></b>
+			<br>
+			<br>
+<img class="sub" src="Sub_Background2.png" alt="Sub Background">
+
+</font>
+			<i>
+			<p class="Copyright">© Knitting Nest</p>
+			</i>
+		</center>
+	</body>
+</html>

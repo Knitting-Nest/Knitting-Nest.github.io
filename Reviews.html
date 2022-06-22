@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+	<head>
+
+		<title> Knitting Nest </title>
+		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
+		<style>
+			body{
+         			background-image: url('Background_image13.png');
+
+    				height:100%;
+ 
+  font-family:Copperplate, Papyrus, fantasy;
+  background-size: cover;
+  background-attachment: fixed;
+			}
+
+			img.image2{
+
+				Height:50%;
+max-height:500px;
+border-radius:40%
+
+		
+}
+			img.image1{
+
+				WIDTH:70px;
+
+				BORDER-RADIUS:200px;
+
+			}
+			p{
+				background-color:rgba(18, 7, 14, 0.55);
+				height: 30px;
+				width:1500px;
+				color:rgb(243, 242, 255);
+				position: fixed;
+   				top: 91%;
+                        left:1%;
+			}
+			h1{
+				color:rgb(150, 83, 24);
+			}
+			h2{
+				color:rgb(103, 86, 150);
+			}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: Center;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 80%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	background-color:rgba(105, 40, 59, 0.51);
+BORDER-RADIUS:50px;
+
+}
+
+.container {
+  padding: 16px 16px;
+}
+
+.container::before, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.47);
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+img.we1{
+BORDER-RADIUS:200px;
+width:40%;
+height:55%;
+}
+img.we{
+BORDER-RADIUS:200px;
+width:50%;
+height:60%;
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar{
+  height: 80px;
+  width: 100%;
+  padding: 10px 30px;
+  background-color:rgba(59, 17, 27, 0.51);
+  position: relative;
+}
+.navbar .nav-header{
+  display: inline;
+}
+.navbar .nav-header .nav-logo{
+  display: inline-block;
+  margin-top: -7px;
+}
+.navbar .nav-links{
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar .nav-links a {
+  padding: 10px 12px;
+  text-decoration: none;
+  font-weight: 550;
+  color: white;
+}
+/* Hover effects */
+.navbar .nav-links a:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+ 
+/* responsive navbar toggle button */
+.navbar #nav-check, .navbar .nav-btn{
+  display: none;
+}
+ 
+@media (max-width:700px) {
+  .navbar .nav-btn{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .navbar .nav-btn label {
+    display: inline-block;
+    width: 80px;
+    height: 70px;
+    padding: 25px;
+  }
+  .navbar .nav-btn label span {
+    display: block;
+    height: 10px;
+    width: 25px;
+    border-top: 3px solid #eee;
+  }
+  .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
+    background-color: rgb(9, 14, 90);
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links{
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 50%;
+    background-color: rgb(95, 85, 99);
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 70px;
+    right: 0px;
+  }
+  .navbar .nav-links a {
+    display: block;
+  }
+ 
+  /* when nav toggle button not checked */
+  .navbar #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+ 
+  /* when nav toggle button is checked */
+  .navbar #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  /* Responsive dropdown code */
+  .navbar .nav-links .dropdown, .navbar .nav-links .dropdown2 {
+    float: none;
+    width: 100%;
+  }
+  .navbar .nav-links .drop-content, .navbar .nav-links .drop-content2 {
+    position: relative;
+    background-color: rgb(220, 220, 250);
+    top: 0px;
+    left: 0px;
+  }
+  /* Text color */
+  .navbar .nav-links .drop-content a {
+    color: rgb(9, 14, 90);
+  }  
+ 
+}
+ 
+/* Dropdown menu CSS code */
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.drop-content, .drop-content2 {
+  display: none;
+  position: absolute;
+  background-color:rgb(95, 85, 99);
+  min-width: 120px;
+  font-size: 19px;
+  top: 34px;
+  z-index: 1;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+}
+/* on hover show dropdown */
+.dropdown:hover .drop-content, .dropdown2:hover .drop-content2 {
+  display: block;
+}
+ .navbar .nav-links .loginBtn {
+    padding: 10px 40px ;
+    margin: 20px;
+    font-size:  18px;
+    font-weight: bold;
+    color: rgb(9, 14, 90);
+  }
+/* drondown links */
+.drop-content a {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgb(197, 197, 250);
+  display: block;
+  transition: all 0.5s ease !important;
+}
+.dropBtn .drop-content a:hover {
+  background-color: rgb(230, 230, 230);
+}
+.dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.dropBtn2 i {
+  margin-left: 15px;
+}
+.navbar .nav-links .loginBtn{
+  display: inline-block;
+  padding: 5px 15px;
+  margin-left: 20px;
+  font-size: 17px;
+  color: rgb(9, 14, 90);
+}
+.notification {
+
+
+  position: relative;
+  display: inline-block;
+
+}
+
+.notification:hover {
+  background: red;
+
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding:0px 5px;
+  border-radius: 100%;
+  background: red;
+  color: white;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(133, 8, 79, 0.71);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+		</style>
+	</head>
+	<body>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+ <div class="navbar">
+ 
+    <!-- Navbar logo -->
+    <div class="nav-header">
+      <div class="nav-logo">
+        <a href="Home_page.html">
+			<img class="image1" src="Knitting_Nest_Logo.png" alt="Our Logo">
+        </a>
+      </div>
+    </div>
+
+
+    <!-- responsive navbar toggle button -->
+    <input type="checkbox" id="nav-check">
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+ 
+    <!-- Navbar items -->
+    <div class="nav-links">
+      <a href="Home_page.html">Home</a>
+
+ 
+      <!-- Dropdown menu -->
+      <div class="dropdown">
+        <a class="dropBtn" href="#">About Us
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="About_Us.html">Our Journey</a>
+          <a href="Our_Customers.html">Our Customers</a>
+            </div>
+          </div>
+      <div class="dropdown">
+        <a class="dropBtn" href="#">Shop
+          <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a href="Shop_Now.html">Catalogue</a>
+          <a href="Best_Sellers.html">Best Sellers</a>
+	          <a href="Reviews.html">Customer Reviews</a>
+            </div>
+          </div>
+
+<a href="New.html" class="notification">
+  <span>Updates</span>
+  <span class="badge">3</span>
+</a>
+          <a href="Contact_Us.html">Contact Us</a>
+      <a href="https://forms.office.com/r/bsVdRqBQfr"><button class="loginBtn">Click To Order</button></a>
+ 
+  </div>
+ 
+  </div>
+<br>
+<br>
+		<center>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+<br>
+        <h2 style="color:white;">Well designes merchandise site... Appreciating your efforts in designing this.. Kudos to you both</h2>
+<br>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+<br>
+        <h2 style="color: white;">Thank you Claire and Grace for the beautifull Christmas decorations. I'm proud of you. I'm sure my friend will be thriled with these gifts.</h2>
+<br>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+<br>
+        <h2 style="color:white;">We received the package from you...Wonderful venture and amazing work👍💖.</h2>
+<br>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+<br>
+        <h2 style="color:white;">I received my order today. It is so nic and my daughter loves it.</h2>
+<br>
+      </div>
+    </div>
+  </div>
+<!--
+			<img class="image2" src="Review1.png" alt="1"><br><br>
+			<img class="image2" src="Review2.png" alt="1"><br><br>
+			<img class="image2" src="Review3.png" alt="1">
+-->
+<br><br><br><br><br><br>
+		    <i>
+			<p>© Knitting Nest</p>
+		    </i>
+		</center>	
+	</body>
+</html>

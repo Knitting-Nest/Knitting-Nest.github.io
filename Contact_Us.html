@@ -45,7 +45,25 @@
 
 
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+  z-index: 99;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: rgba(133, 8, 79, 0.71);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
 
+#myBtn:hover {
+  background-color: #555;
+}
 html {
   box-sizing: border-box;
 }
@@ -56,10 +74,11 @@ html {
 
 .column {
   float: center;
-  width: 33.3%;
+  width: 40%;
   margin-bottom: 16px;
   padding: 0 8px;
 }
+
 
 @media screen and (max-width: 650px) {
   .column {
@@ -307,7 +326,29 @@ height:60%;
 		</style>
 	</head>
 	<body>
-	
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
  <div class="navbar">
  
     <!-- Navbar logo -->
@@ -367,24 +408,50 @@ height:60%;
  
   </div>
 
-		<center>
+
 
 			<br>
 			<br>
 			<br>
+		<center>
 <br>
 <div class="row">
   <div class="column">
     <div class="card">
+
+
+		<center>
 <br>      <img class="we" src="email.png" alt="Email Us">
       <div class="container">
         <h2 style="color:rgba(160, 216, 242, 0.89);">For queries, concerns and bulk/customized orders</h2>
 <br>
 <a class="button" href="mailto:KnittingNestShopNow@gmail.com" target="_top">Contact</a>
+
+
+		</center>
 <br><br>
       </div>
     </div>
   </div>	
+<div class="row">
+  <div class="column">
+    <div class="card">
+
+
+		<center>
+<br>      <img class="we" src="Insta.png" alt="Instagram">
+      <div class="container">
+        <h2 style="color:rgba(160, 216, 242, 0.89);">Check out our Instagram page.</h2>
+<br>
+<a class="button" href="https://www.instagram.com/knittingnestshopnow/" target="_top">Visit</a>
+<br><br>
+
+
+		</center>
+      </div>
+    </div>
+  </div>	
+		</center>
 <!--
 			<br>
 			<br>
@@ -401,8 +468,6 @@ height:60%;
 			</font>
 
 -->
-
-
-		</center>	
+	
 	</body>
 </html>

@@ -42,7 +42,57 @@ body {
         .column img {
             width: 100%; /* Make images fill the column width */
             display: block; /* Ensure images don't have extra space below */
-        }hr {
+        }
+/* Define styles for columns */
+.column {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Responsive layout for laptops */
+@media screen and (max-width: 1200px) {
+    .column {
+        flex: 0 0 calc(33.33% - 20px); /* Show three columns */
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+/* Responsive layout for tablets */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 0 0 calc(50% - 20px); /* Show two columns */
+        max-width: calc(50% - 20px);
+    }
+}
+
+/* Responsive layout for phones */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 0 0 calc(100% - 20px); /* Show one column */
+        max-width: calc(100% - 20px);
+    }
+}
+
+/* Adjust spacing between images and footer */
+.row {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1900px; /* Default margin-bottom */
+}
+
+/* Adjust margin-bottom for smaller screens */
+@media screen and (max-width: 800px) {
+    .row {
+        margin-bottom: 100px; /* Change margin-bottom for smaller screens */
+    }
+}
+hr {
   margin: auto;
 
   width: 40%;
@@ -159,6 +209,7 @@ body {
   <div class="copyright">
     <p>&copy; 2023 Knitting Nest. All rights reserved.</p>
     <p>Coded by <a href="About_Us.html">Claire & Grace Fernandes</a></p>
+<br>
   </div>
 </footer>
 <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>

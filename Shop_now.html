@@ -1,0 +1,1850 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Knitting Nest</title>
+		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
+		<link href="Common.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ .navbar {
+            line-height: 1.6;
+            z-index: 2; /* Ensure navbar appears above rows */
+        }
+.btn,h4{
+font-family: "Courier New", Courier, monospace;
+}
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px; /* Added padding for spacing around main content */
+        }
+
+        h1 {
+            font-size: 50px;
+            word-break: break-all;
+        }
+
+        .row {
+            margin: 20px -8px; /* Increased margin for more spacing around rows */
+            overflow: hidden; /* Clearfix to contain floated columns */
+        }
+
+        /* Add padding BETWEEN each column */
+        .row > .column {
+            padding: 20px; /* Added padding for spacing between columns and text */
+            float: left;
+            width: calc(33.33% - 20px); /* Adjusted width for three equal columns */
+            margin-right: 20px; /* Added margin-right for spacing between columns */
+            min-height: 400px; /* Ensure minimum height for each row */
+        }
+
+        /* Clear floats after rows */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Content */
+        .content {
+            background-color: white;
+            padding: 10px;
+            height: 100%; /* Ensure content fills column height */
+        }
+
+        /* Make images responsive and uniform */
+        img {
+            max-width: 100%; /* Limit image width to 100% of container */
+            height: auto; /* Automatically adjust height to maintain aspect ratio */
+            max-height: 200px; /* Limit image height to 200px */
+            object-fit: cover; /* Crop the images to fit the container */
+            border-radius: 5px; /* Add rounded corners */
+        }
+
+        /* Ensure paragraph and h4 tags are visible */
+        .column p, .column h4 {
+            margin: 10px 0; /* Add margin to separate paragraphs and h4 tags */
+            color: black; /* Ensure text is visible */
+        }
+
+        /* The "show" class is added to the filtered elements */
+        .show {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+  font-family: 	 Andale Mono, monospace;
+}
+
+.btn:hover {
+  background-color: #f3820047	;
+  font-family: 	 Andale Mono, monospace;
+
+}
+
+.btn.active {
+  background-color: #b86200bc;
+  font-family: 	 Andale Mono, monospace;
+  color: white;
+}
+
+        @media only screen and (max-width: 768px) {
+            .row > .column {
+                width: calc(50% - 20px); /* Adjusted width for two columns on smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .row > .column {
+                width: 100%; /* Single column on even smaller screens */
+                margin-right: 0; /* Remove margin-right */
+            }
+        }
+
+   }
+hr {
+  margin: auto;
+
+  width: 40%;
+}
+</style>
+	</head>
+	<body>
+
+<div class="navbar" id="navbar">
+  <a href="Home_page.html">Home</a>
+  <a href="About_Us.html">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown▾
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Shop_now.html">Shop Now</a><br>
+      <a href="Experiences.html">Experiences</a>
+    </div>
+</div>
+  <a href="Help.html">Help</a>
+ <a href="https://forms.gle/ZoKD24cb8btnorFQ7"><b>Order Now</b></a>
+  <a href="https://www.instagram.com/knittingnestshopnow/" ><img src="insta.png" alt="Instagram" class="insta" ></a>
+   <a href="Home_page.html" class="split"><img class="Logo" src="Logo.png" alt="Our Logo"></a>
+<!---->
+</div>
+<br>
+
+
+<!-- Portfolio Gallery Grid -->
+<b>
+
+<center>
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')">Show all</button>
+
+    <button class="btn" data-categories="bookmark"> <u>Bookmarks</u></button>
+    <button class="btn" data-categories="ornament"><u> Ornaments</u></button>
+    <button class="btn" data-categories="animal"> <u>Animals</u></button>
+    <button class="btn" data-categories="plushie"><u> Plushie</u></button>
+    <button class="btn" data-categories="napkin"> <u>Napkins</u></button>
+    <button class="btn" data-categories="nativity"> <u>Nativity Scene</u></button>
+    <button class="btn" data-categories="flower"> <u>Flowers</u></button>
+    <button class="btn" data-categories="hairband"> <u>Hairbands</u></button>
+    <button class="btn" data-categories="bracelet"><u> Braclets</u></button>
+    <button class="btn" data-categories="dinosaur"> <u>Dinosaur</u></button>
+    <button class="btn" data-categories="valentine"><u> Valentines</u></button>
+    <button class="btn" data-categories="christmas"><u> Christmas</u></button>
+    <button class="btn" data-categories="coaster"><u> Coaster</u></button>
+    <button class="btn" data-categories="frames"><u> Frames</u></button>
+    <button class="btn" data-categories="fall"><u> Fall</u></button>
+    <button class="btn" data-categories="halloween"><u> Halloween</u></button>
+    <button class="btn" data-categories="easter"><u> Easter</u></button>
+    <button class="btn" data-categories="pendent"> <u>Pendent</u></button>
+    <button class="btn" data-categories="squished"><u> Squished Bookmark</u></button>
+    <button class="btn" data-categories="gnome"><u> Gnome</u></button>
+    <button class="btn" data-categories="keychain"><u> Plushie</u></button>
+    <button class="btn" data-categories="crochet"> <u>Crochet</u></button>
+    <button class="btn" data-categories="knitted"><u> Knitted</u></button>
+    <button class="btn" data-categories="embroidery"><u> Embroidery</u></button>
+  <button class="btn" data-categories="decor"><u> Decor</u></button>
+<button class="btn" data-categories="accessories"><u> Accessories</u></button>
+<button class="btn" data-categories="custom"> <u>Custom</u></button>
+<button class="btn" data-categories="earring"> <u>Earrings</u></button>
+</div>
+<hr>
+</b>
+
+</center>
+<!-- Portfolio Gallery Grid -->
+
+<div class="row">
+    <div class="column bookmark crochet">
+        <div class="content">
+            <img src="Pno_1.jpg" alt="Tea Bag Book Mark" style="width:100%">
+            <h4>Product No. 1</h4>
+            <h4>Tea Bag Book Mark</h4>
+            <p>₹100</p>
+        </div>
+    </div>
+
+    <div class="column knitted plushie animal">
+        <div class="content">
+            <img src="Pno_2.jpg" alt="Knitted Bunny" style="width:100%">
+            <h4>Product No. 2</h4>
+            <h4>Knitted Bunny</h4>
+            <p>₹150</p>
+        </div>
+    </div>
+   <div class="column plushie crochet">
+    <div class="content">
+        <img src="Pno_3.jpg" alt="Bunny Paper Weight" style="width:100%">
+        <h4>Product No. 3</h4>
+        <h4>Bunny Paper Weight</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet ornament decor christmas">
+    <div class="content">
+        <img src="Pno_4.jpg" alt="Santa Ornament" style="width:100%">
+        <h4>Product No. 4</h4>
+        <h4>Santa Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column easter flower decor crochet">
+    <div class="content">
+        <img src="Pno_5.jpg" alt="Trinket Basket" style="width:100%">
+        <h4>Product No. 5</h4>
+        <h4>Trinket Basket</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+
+<div class="column christmas ornament animal crochet">
+    <div class="content">
+        <img src="Pno_6.jpg" alt="Rudolf Ornament" style="width:100%">
+        <h4>Product No. 6</h4>
+        <h4>Rudolf Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column">
+    <div class="content christmas ornament decor crochet">
+        <img src="Pno_7.jpg" alt="Snowman Ornament" style="width:100%">
+        <h4>Product No. 7</h4>
+        <h4>Snowman Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column">
+    <div class="content christmas crochet decor ornament">
+        <img src="Pno_8.jpg" alt="Santa Boot Ornament" style="width:100%">
+        <h4>Product No. 8</h4>
+        <h4>Santa Boot Ornament</h4>
+        <p>₹20</p>
+    </div>
+</div>
+
+<div class="column christmas knitted decor ornament">
+    <div class="content">
+        <img src="Pno_9.jpg" alt="Christmas Tree Ornament" style="width:100%">
+        <h4>Product No. 9</h4>
+        <h4>Christmas Tree Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column hairband flower accessories crochet">
+    <div class="content">
+        <img src="Pno_10.jpg" alt="Flower Hairband" style="width:100%">
+        <h4>Product No. 10</h4>
+        <h4>Flower Hairband</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column flowers bracelet accessories crochet">
+    <div class="content">
+        <img src="Pno_11.jpg" alt="Flower Corsage" style="width:100%">
+        <h4>Product No. 11</h4>
+        <h4>Flower Corsage</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column dinosaur plushie animal crochet">
+    <div class="content">
+        <img src="Pno_12.jpg" alt="Brachiosaurus" style="width:100%">
+        <h4>Product No. 12</h4>
+        <h4>Brachiosaurus</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column dinosaur plushie animal crochet">
+    <div class="content">
+        <img src="Pno_13.jpg" alt="Triceratops" style="width:100%">
+        <h4>Product No. 13</h4>
+        <h4>Triceratops</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column dinosaur plushie animal crochet">
+    <div class="content">
+        <img src="Pno_14.jpg" alt="Stegosaurus" style="width:100%">
+        <h4>Product No. 14</h4>
+        <h4>Stegosaurus</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column dinosaur plushie animal crochet">
+    <div class="content">
+        <img src="Pno_15.jpg" alt="T-Rex" style="width:100%">
+        <h4>Product No. 15</h4>
+        <h4>T-Rex</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column dinosaur plushie animal crochet">
+    <div class="content">
+        <img src="Pno_16.jpg" alt="Baby Dino Nest" style="width:100%">
+        <h4>Product No. 16</h4>
+        <h4>Baby Dino Nest</h4>
+        <p>₹850</p>
+    </div>
+</div>
+
+<div class="column accessories crochet">
+    <div class="content">
+        <img src="Pno_17.jpg" alt="Drawstring Bag" style="width:100%">
+        <h4>Product No. 17</h4>
+        <h4>Drawstring Bag</h4>
+        <p>₹350</p>
+    </div>
+</div>
+
+<div class="column accessories plushie crochet">
+    <div class="content">
+        <img src="Pno_18.jpg" alt="Ring Pillow" style="width:100%">
+        <h4>Product No. 18</h4>
+        <h4>Ring Pillow</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column valentine plushie animal crochet">
+    <div class="content">
+        <img src="Pno_19.png" alt="Heart cat" style="width:100%">
+        <h4>Product No. 19</h4>
+        <h4>Heart cat</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column plushie animal knitted">
+    <div class="content">
+        <img src="Pno_20.jpg" alt="Teddy Bear" style="width:100%">
+        <h4>Product No. 20</h4>
+        <h4>Teddy Bear</h4>
+        <p>₹600</p>
+    </div>
+</div>
+<div class="column accessories custom embroidery">
+    <div class="content">
+        <img src="Pno_21.png" alt="Embroidered Mark (Letters)" style="width:100%">
+        <h4>Product No. 21</h4>
+        <h4>Embroidered Mark (Letters)</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column animal plushie crochet decor">
+    <div class="content">
+        <img src="Pno_22.png" alt="Sea Turtles (Large/Small)" style="width:100%">
+        <h4>Product No. 22</h4>
+        <h4>Sea Turtles (Large/Small)</h4>
+        <p>Small-₹100 / Large-₹150</p>
+    </div>
+</div>
+
+<div class="column animal coaster crochet">
+    <div class="content">
+        <img src="Pno_23.png" alt="Animal Coasters" style="width:100%">
+        <h4>Product No. 23</h4>
+        <h4>Animal Coasters (Set of 3)</h4>
+
+        <p>₹250</p>
+       
+    </div>
+</div>
+
+<div class="column flower crochet">
+    <div class="content">
+        <img src="Pno_24.png" alt="Mini Roses" style="width:100%">
+        <h4>Product No. 24</h4>
+        <h4>Mini Roses (Set of 6)</h4>
+        <p>₹120</p>
+    </div>
+</div>
+
+<div class="column crochet ornament christmas decor">
+    <div class="content">
+        <img src="Pno_25.jpg" alt="Angel Ornament" style="width:100%">
+        <h4>Product No. 25</h4>
+        <h4>Angel Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column christmas crochet">
+    <div class="content">
+        <img src="Pno_26.png" alt="Christmas Streamer" style="width:100%">
+        <h4>Product No. 26</h4>
+        <h4>Christmas Streamer</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column chrochet christmas coaster">
+    <div class="content">
+        <img src="Pno_27.png" alt="Snow Globe Coasters" style="width:100%">
+        <h4>Product No. 27</h4>
+        <h4>Snow Globe Coasters (Set of 2)</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column christmas ornament decor crochet">
+    <div class="content">
+        <img src="Pno_28.jpg" alt="Bell Ornament" style="width:100%">
+        <h4>Product No. 28</h4>
+        <h4>Bell Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column christmas crochet decor ornament">
+    <div class="content">
+        <img src="Pno_29.jpg" alt="Icicle Ornament" style="width:100%">
+        <h4>Product No. 29</h4>
+        <h4>Icicle Ornament</h4>
+        <p>₹20</p>
+    </div>
+</div>
+
+<div class="column christmas crochet decor ornament">
+    <div class="content">
+        <img src="Pno_30.jpg" alt="Wreath Ornament" style="width:100%">
+        <h4>Product No. 30</h4>
+        <h4>Wreath Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column christmas crochet decor ornament">
+    <div class="content">
+        <img src="Pno_31.png" alt="Candle Ornament" style="width:100%">
+        <h4>Product No. 31</h4>
+        <h4>Candle Ornament</h4>
+        <p>₹20</p>
+    </div>
+</div>
+
+<div class="column christmas crochet decor ornament">
+    <div class="content">
+        <img src="Pno_32.jpg" alt="Gingerbread Man Ornament" style="width:100%">
+        <h4>Product No. 32</h4>
+        <h4>Gingerbread Man Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column christmas crochet decor ornament">
+    <div class="content">
+        <img src="Pno_33.jpg" alt="Present Ornament" style="width:100%">
+        <h4>Product No. 33</h4>
+        <h4>Present Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column christmas crochet decor ornament">
+    <div class="content">
+        <img src="Pno_34.jpg" alt="Snowflake Ornament" style="width:100%">
+        <h4>Product No. 34</h4>
+        <h4>Snowflake Ornament</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column christmas crochet">
+    <div class="content">
+        <img src="Pno_35.png" alt="Star Streamer" style="width:100%">
+        <h4>Product No. 35</h4>
+        <h4>Star Streamer</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column embroidery frames decor">
+    <div class="content">
+        <img src="Pno_36.png" alt="Blessed' Frame" style="width:100%">
+        <h4>Product No. 36</h4>
+        <h4>Blessed' Frame</h4>
+        <p>₹600</p>
+    </div>
+</div>
+
+<div class="column embroidery frames decor christmas">
+    <div class="content">
+        <img src="Pno_37.png" alt="Merry Christmas' Frame" style="width:100%">
+        <h4>Product No. 37</h4>
+        <h4>Merry Christmas' Frame</h4>
+        <p>₹600</p>
+    </div>
+</div>
+
+<div class="column bookmark crochet">
+    <div class="content">
+        <img src="Pno_38.png" alt="Wavy Bookmark" style="width:100%">
+        <h4>Product No. 38</h4>
+        <h4>Wavy Bookmark</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column crochet decor easter plushie">
+    <div class="content">
+        <img src="Pno_39.png" alt="Easter Eggs" style="width:100%">
+        <h4>Product No. 39</h4>
+        <h4>Easter Eggs (Set of 3)</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet decor plushie easter animal">
+    <div class="content">
+        <img src="Pno_40.png" alt="Egg Caps" style="width:100%">
+        <h4>Product No. 40</h4>
+        <h4>Egg Caps (Set of 4)</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column animal plushie crochet">
+    <div class="content">
+        <img src="Pno_41.jpg" alt="Bumble Bee" style="width:100%">
+        <h4>Product No. 41</h4>
+        <h4>Bumble Bee</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column accessories crochet">
+    <div class="content">
+        <img src="Pno_42.jpg" alt="Phone Cover" style="width:100%">
+        <h4>Product No. 42</h4>
+        <h4>Phone Cover</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column animal crochet keychain">
+    <div class="content">
+        <img src="Pno_43.jpg" alt="Cat Keychain" style="width:100%">
+        <h4>Product No. 43</h4>
+        <h4>Cat Keychain</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column crochet keychain">
+    <div class="content">
+        <img src="Pno_44.jpg" alt="Cactus Keychain" style="width:100%">
+        <h4>Product No. 44</h4>
+        <h4>Cactus Keychain</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column keychain crochet">
+    <div class="content">
+        <img src="Pno_45.jpg" alt="Sushi Keychain" style="width:100%">
+        <h4>Product No. 45</h4>
+        <h4>Sushi Keychain</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column crochet animal accessories plushie">
+    <div class="content">
+        <img src="Pno_46.jpg" alt="Unicorn Pencil Topper" style="width:100%">
+        <h4>Product No. 46</h4>
+        <h4>Unicorn Pencil Topper</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column plushie crochet valentines accessories">
+    <div class="content">
+        <img src="Pno_47.jpg" alt="Peas in a Pod" style="width:100%">
+        <h4>Product No. 47</h4>
+        <h4>Peas in a Pod</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column">
+    <div class="content crochet animal keychain">
+        <img src="Pno_48.jpg" alt="Paw Keychain" style="width:100%">
+        <h4>Product No. 48</h4>
+        <h4>Paw Keychain</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column keychain crochet animal">
+    <div class="content">
+        <img src="Pno_49.jpg" alt="Owl Keychain" style="width:100%">
+        <h4>Product No. 49</h4>
+        <h4>Owl Keychain</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column bracelet accessories crochet">
+    <div class="content">
+        <img src="Pno_50.jpg" alt="Friendship Bands" style="width:100%">
+        <h4>Product No. 50</h4>
+        <h4>Friendship Bands</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column accessories animal crochet">
+    <div class="content">
+        <img src="Pno_51.jpg" alt="Cat Ear Clips" style="width:100%">
+        <h4>Product No. 51</h4>
+        <h4>Cat Ear Clips</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column animal accessories crochet">
+    <div class="content">
+        <img src="Pno_52.jpg" alt="Sheep Broche" style="width:100%">
+        <h4>Product No. 52</h4>
+        <h4>Sheep Broche</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet animal accessories napkin">
+    <div class="content">
+        <img src="Pno_53.jpg" alt="Bunny Napkin" style="width:100%">
+        <h4>Product No. 53</h4>
+        <h4>Bunny Napkin</h4>
+        <p>₹350</p>
+    </div>
+</div>
+
+<div class="column animal crochet decor">
+    <div class="content">
+        <img src="Pno_54.jpg" alt="Whale" style="width:100%">
+        <h4>Product No. 54</h4>
+        <h4>Whale (Set of 2)</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column coaster crochet">
+    <div class="content">
+        <img src="Pno_55.jpg" alt="Mini Coasters" style="width:100%">
+        <h4>Product No. 55</h4>
+        <h4>Mini Coasters (Set of 2)</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column coasters fall halloween crochet">
+    <div class="content">
+        <img src="Pno_56.jpg" alt="Pumpkin Coasters" style="width:100%">
+        <h4>Product No. 56</h4>
+        <h4>Pumpkin Coasters (Set of 2)</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column crochet halloween gnome decor">
+    <div class="content">
+        <img src="Pno_57.jpg" alt="Halloween Gnome" style="width:100%">
+        <h4>Product No. 57</h4>
+        <h4>Halloween Gnome</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column fall halloween crochet decor">
+    <div class="content">
+        <img src="Pno_58.png" alt="Mini Pumpkins" style="width:100%">
+        <h4>Product No. 58</h4>
+        <h4>Mini Pumpkins (Set of 2)</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column fall halloween crochet decor">
+    <div class="content">
+        <img src="Pno_59.png" alt="Squash Plushie" style="width:100%">
+        <h4>Product No. 59</h4>
+        <h4>Squash Plushie</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column fall crochet halloween decor">
+    <div class="content">
+        <img src="Pno_60.jpg" alt="Pumpkin Plushie (Large/Medium/Small)" style="width:100%">
+        <h4>Product No. 60</h4>
+        <h4>Pumpkin Plushie </h4>
+        <p>Large-₹300</p>
+<p>Medium-₹200</p>
+<p>Small-₹150</p>
+    </div>
+</div>
+
+<div class="column christmas ornament decor crochet">
+    <div class="content">
+        <img src="Pno_61.png" alt="Star Ornaments" style="width:100%">
+        <h4>Product No. 61</h4>
+        <h4>Star Ornaments</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column keychain crochet fall halloween">
+    <div class="content">
+        <img src="Pno_62.jpg" alt="Pumpkin Keychain" style="width:100%">
+        <h4>Product No. 62</h4>
+        <h4>Pumpkin Keychain</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column earring accessories crochet">
+    <div class="content">
+        <img src="Pno_63.jpg" alt="Watermelon Earings" style="width:100%">
+        <h4>Product No. 63</h4>
+        <h4>Watermelon Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories">
+    <div class="content">
+        <img src="Pno_64.jpg" alt="Tamaring Earings" style="width:100%">
+        <h4>Product No. 64</h4>
+        <h4>Tamaring Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories">
+    <div class="content">
+        <img src="Pno_65.jpg" alt="Monstera Earings" style="width:100%">
+        <h4>Product No. 65</h4>
+        <h4>Monstera Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories">
+    <div class="content">
+        <img src="Pno_66.jpg" alt="Tri-circle Earings" style="width:100%">
+        <h4>Product No. 66</h4>
+        <h4>Tri-circle Earings</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories christmas">
+    <div class="content">
+        <img src="Pno_67.png" alt="Angel Earings" style="width:100%">
+        <h4>Product No. 67</h4>
+        <h4>Angel Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories fall">
+    <div class="content">
+        <img src="Pno_68.jpg" alt="Fall Leaf Earings" style="width:100%">
+        <h4>Product No. 68</h4>
+        <h4>Fall Leaf Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories flower">
+    <div class="content">
+        <img src="Pno_69.png" alt="Mini flower Earings" style="width:100%">
+        <h4>Product No. 69</h4>
+        <h4>Mini flower Earings</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories">
+    <div class="content">
+        <img src="Pno_70.jpg" alt="Sun drop Earings" style="width:100%">
+        <h4>Product No. 70</h4>
+        <h4>Sun drop Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column christmas crochet ornament decor">
+    <div class="content">
+        <img src="Pno_71.jpg" alt="Tree Ornaments" style="width:100%">
+        <h4>Product No. 71</h4>
+        <h4>Tree Ornaments</h4>
+        <p>₹25</p>
+    </div>
+</div>
+
+<div class="column nativity plushie decor christmas">
+    <div class="content">
+        <img src="Pno_72.jpg" alt="Nativity Scene (3 Piece)" style="width:100%">
+        <h4>Product No. 72</h4>
+        <h4>Nativity Scene (3 Piece)</h4>
+        <p>₹350</p>
+    </div>
+</div>
+
+<div class="column christmas plushie decor crochet">
+    <div class="content">
+        <img src="Pno_73.jpg" alt=" Trees" style="width:100%">
+        <h4>Product No. 73</h4>
+        <h4>Trees (Set of 3)</h4>
+        <p>₹550</p>
+    </div>
+</div>
+
+<div class="column christmas plushie decor crochet">
+    <div class="content">
+        <img src="Pno_74.jpg" alt="Angel Plushie" style="width:100%">
+        <h4>Product No. 74</h4>
+        <h4>Angle Plushie</h4>
+        <p>₹350</p>
+    </div>
+</div>
+
+<div class="column valentine decor accessories crochet">
+    <div class="content">
+        <img src="Pno_75.jpg" alt="Bride and Groom" style="width:100%">
+        <h4>Product No. 75</h4>
+        <h4>Bride and Groom</h4>
+        <p>₹250</p>
+    </div>
+</div>
+<div class="column flower earring accessories crochet">
+    <div class="content">
+        <img src="Pno_76.png" alt="Bead-Flowers Earings" style="width:100%">
+        <h4>Product No. 76</h4>
+        <h4>Bead-Flowers Earings</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column valentine decor crochet animal accessories">
+    <div class="content">
+        <img src="Pno_77.jpg" alt="Love Birds" style="width:100%">
+        <h4>Product No. 77</h4>
+        <h4>Love Birds</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column crochet keychain">
+    <div class="content">
+        <img src="Pno_78.jpg" alt="Mermaid Tale Keychain" style="width:100%">
+        <h4>Product No. 78</h4>
+        <h4>Mermaid Tale Keychain</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column plushie crochet valentine">
+    <div class="content">
+        <img src="Pno_79.jpg" alt="Heart Plushie" style="width:100%">
+        <h4>Product No. 79</h4>
+        <h4>Heart Plushie</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column christmas bookmark crochet">
+    <div class="content">
+        <img src="Pno_80.jpg" alt="Cross Bookmarks" style="width:100%">
+        <h4>Product No. 80</h4>
+        <h4>Cross Bookmarks</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column easter crochet animal decor">
+    <div class="content">
+        <img src="Pno_81.jpg" alt="Bunny Easter Eggs (Small/Large)" style="width:100%">
+        <h4>Product No. 81</h4>
+        <h4>Bunny Easter Eggs (Small/Large)</h4>
+        <p>Small-₹150/Large-₹250</p>
+    </div>
+</div>
+
+<div class="column crochet animal fall easter coaster">
+    <div class="content">
+        <img src="Pno_82.png" alt="Hen Coasters" style="width:100%">
+        <h4>Product No. 82</h4>
+        <h4>Hen Coasters (Set of 2)</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories">
+    <div class="content">
+        <img src="Pno_83.jpg" alt="Ash Leaf Earings" style="width:100%">
+        <h4>Product No. 83</h4>
+        <h4>Ash Leaf Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet earring accessories flower">
+    <div class="content">
+        <img src="Pno_84.jpg" alt="Sun Flower Earings" style="width:100%">
+        <h4>Product No. 84</h4>
+        <h4>Sun Flower Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column pendent accessories crochet">
+    <div class="content">
+        <img src="Pno_85.jpg" alt="Sun Pendant" style="width:100%">
+        <h4>Product No. 85</h4>
+        <h4>Sun Pendant</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet squished bookmark ">
+    <div class="content">
+        <img src="Pno_86.jpg" alt="Mermaid Bookmark" style="width:100%">
+        <h4>Product No. 86</h4>
+        <h4>Mermaid Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column squished bookmark animal crochet">
+    <div class="content">
+        <img src="Pno_87.jpg" alt="Lizard Bookmark" style="width:100%">
+        <h4>Product No. 87</h4>
+        <h4>Lizard Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column bookmark squished animal crochet">
+    <div class="content">
+        <img src="Pno_88.jpg" alt="Mouse Bookmark" style="width:100%">
+        <h4>Product No. 88</h4>
+        <h4>Mouse Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column squished bookmark animal crochet">
+    <div class="content">
+        <img src="Pno_89.jpg" alt="Lion Bookmark" style="width:100%">
+        <h4>Product No. 89</h4>
+        <h4>Lion Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column crochet squished bookmark animal">
+    <div class="content">
+        <img src="Pno_90.jpg" alt="Elephant Bookmark" style="width:100%">
+        <h4>Product No. 90</h4>
+        <h4>Elephant Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+<div class="column bookmark squished crochet">
+    <div class="content">
+        <img src="Pno_91.jpg" alt="Harry Potter Bookmark" style="width:100%">
+        <h4>Product No. 91</h4>
+        <h4>Harry Potter Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column animal crochet squished bookmark">
+    <div class="content">
+        <img src="Pno_92.jpg" alt="Unicorn Bookmark" style="width:100%">
+        <h4>Product No. 92</h4>
+        <h4>Unicorn Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column earring crochet accessories">
+    <div class="content">
+        <img src="Pno_93.jpg" alt="Hoop Earings" style="width:100%">
+        <h4>Product No. 93</h4>
+        <h4>Hoop Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column flower hairband accessories crochet">
+    <div class="content">
+        <img src="Pno_94.jpg" alt="Mini Flower Hairband" style="width:100%">
+        <h4>Product No. 94</h4>
+        <h4>Mini Flower Hairband</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column animal crochet earring accessories">
+    <div class="content">
+        <img src="Pno_95.jpg" alt="Jelly Fish Earing" style="width:100%">
+        <h4>Product No. 95</h4>
+        <h4>Jelly Fish Earing</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet coaster halloween">
+    <div class="content">
+        <img src="Pno_96.jpg" alt="Spider Web Coasters" style="width:100%">
+        <h4>Product No. 96</h4>
+        <h4>Spider Web Coasters (Set of 2)</h4>
+        <p>₹180</p>
+    </div>
+</div>
+
+<div class="column crochet ornament accessories decor">
+    <div class="content">
+        <img src="Pno_97.jpg" alt="Wall Décor" style="width:100%">
+        <h4>Product No. 97</h4>
+        <h4>Wall Décor</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column nativity christmas decor plushie crochet">
+    <div class="content">
+        <img src="Pno_98.jpg" alt="Three Kings (3 Piece)" style="width:100%">
+        <h4>Product No. 98</h4>
+        <h4>Three Kings (3 Piece)</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column nativity christmas decor plushie crochet">
+    <div class="content">
+        <img src="Pno_99.jpg" alt="Shepherds (2 Piece)" style="width:100%">
+        <h4>Product No. 99</h4>
+        <h4>Shepherds (2 Piece)</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column nativity christmas decor plushie crochet animal">
+    <div class="content">
+        <img src="Pno_100.png" alt="Sheep (2 Piece)" style="width:100%">
+        <h4>Product No. 100</h4>
+        <h4>Sheep (2 Piece)</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column nativity christmas decor plushie crochet">
+    <div class="content">
+        <img src="Pno_101.png" alt="Palm Tree" style="width:100%">
+        <h4>Product No. 101</h4>
+        <h4>Palm Tree</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column nativity christmas decor plushie crochet">
+    <div class="content">
+        <img src="Pno_102.jpg" alt="Nativity Angel" style="width:100%">
+        <h4>Product No. 102</h4>
+        <h4>Nativity Angel</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column nativity christmas decor plushie crochet">
+    <div class="content">
+        <img src="Pno_103.jpg" alt="Nativity Scene (13 Pieces)" style="width:100%">
+        <h4>Product No. 103</h4>
+        <h4>Nativity Scene (13 Pieces)</h4>
+        <p>₹1500</p>
+    </div>
+</div>
+
+<div class="column christmas gnome crochet decor">
+    <div class="content">
+        <img src="Pno_104.jpg" alt="Santa Gnome" style="width:100%">
+        <h4>Product No. 104</h4>
+        <h4>Santa Gnome</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column christmas gnome crochet decor">
+    <div class="content">
+        <img src="Pno_105.jpg" alt="Christmas Tree Gnome" style="width:100%">
+        <h4>Product No. 105</h4>
+        <h4>Christmas Tree Gnome</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column christmas gnome crochet decor animal">
+    <div class="content">
+        <img src="Pno_106.jpg" alt="Reindeer Gnome" style="width:100%">
+        <h4>Product No. 106</h4>
+        <h4>Reindeer Gnome</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column custom keychain crochet">
+    <div class="content">
+        <img src="Pno_107.jpg" alt="Alphabet Keychain" style="width:100%">
+        <h4>Product No. 107</h4>
+        <h4>Alphabet Keychain</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column napkin embroidery custom">
+    <div class="content">
+        <img src="Pno_108.jpg" alt="Names on Napkins" style="width:100%">
+        <h4>Product No. 108</h4>
+        <h4>Names on Napkins</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column earring accessories crochet">
+    <div class="content">
+        <img src="Pno_109.jpg" alt="Oak Leaf Earings" style="width:100%">
+        <h4>Product No. 109</h4>
+        <h4>Oak Leaf Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column valentine plushie animal crochet">
+    <div class="content">
+        <img src="Pno_110.jpg" alt="Paper Weight Cat On Pillow" style="width:100%">
+        <h4>Product No. 110</h4>
+        <h4>Paper Weight Cat On Pillow</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column crochet decor accessories">
+    <div class="content">
+        <img src="Pno_111.jpg" alt="Curtain Holders" style="width:100%">
+        <h4>Product No. 111</h4>
+        <h4>Curtain Holders</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column keychain crochet">
+    <div class="content">
+        <img src="Pno_112.jpg" alt="Trophy Keychain" style="width:100%">
+        <h4>Product No. 112</h4>
+        <h4>Trophy Keychain</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column keychain crochet">
+    <div class="content">
+        <img src="Pno_113.jpg" alt="Bubble Tea Keychain" style="width:100%">
+        <h4>Product No. 113</h4>
+        <h4>Bubble Tea Keychain</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet hairband accessories">
+    <div class="content">
+        <img src="Pno_114.jpg" alt="Bow Hairband" style="width:100%">
+        <h4>Product No. 114</h4>
+        <h4>Bow Hairband</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column keychain animal crochet">
+    <div class="content">
+        <img src="Pno_115.jpg" alt="Tri-Fish Keychain" style="width:100%">
+        <h4>Product No. 115</h4>
+        <h4>Tri-Fish Keychain</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column earing crochet">
+    <div class="content">
+        <img src="Pno_116.jpg" alt="Interlocked Earings" style="width:100%">
+        <h4>Product No. 116</h4>
+        <h4>Interlocked Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet keychain">
+    <div class="content">
+        <img src="Pno_117.jpg" alt="Rainbow Keychain" style="width:100%">
+        <h4>Product No. 117</h4>
+        <h4>Rainbow Keychain</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet coaster flower">
+    <div class="content">
+        <img src="Pno_118.jpg" alt="White Flower Coaster" style="width:100%">
+        <h4>Product No. 118</h4>
+        <h4>White Flower Coaster (Set of 2)</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column knitted bookmark">
+    <div class="content">
+        <img src="Pno_119.jpg" alt="Knitted Bookmark" style="width:100%">
+        <h4>Product No. 119</h4>
+        <h4>Knitted Bookmark</h4>
+        <p>₹250</p>
+    </div>
+</div>
+
+<div class="column pendant animal crochet">
+    <div class="content">
+        <img src="Pno_120.jpg" alt="Fish Pendant" style="width:100%">
+        <h4>Product No. 120</h4>
+        <h4>Fish Pendant</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column decor easter crochet ornament">
+    <div class="content">
+        <img src="Pno_121.png" alt="Egg Décor" style="width:100%">
+        <h4>Product No. 121</h4>
+        <h4>Egg Décor</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column crochet accessories">
+    <div class="content">
+        <img src="Pno_122.jpg" alt="Gift Bag" style="width:100%">
+        <h4>Product No. 122</h4>
+        <h4>Gift Bag</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column earring crochet">
+    <div class="content">
+        <img src="Pno_123.jpg" alt="Diamond Earing" style="width:100%">
+        <h4>Product No. 123</h4>
+        <h4>Diamond Earing</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column easter animal ornament crochet decor">
+    <div class="content">
+        <img src="Pno_124.jpg" alt="Bunny Décor" style="width:100%">
+        <h4>Product No. 124</h4>
+        <h4>Bunny Décor</h4>
+        <p>₹50</p>
+    </div>
+</div>
+
+<div class="column animal crochet plushie">
+    <div class="content">
+        <img src="Pno_125.jpg" alt="Dog Plushie" style="width:100%">
+        <h4>Product No. 125</h4>
+        <h4>Dog Plushie</h4>
+        <p>₹300</p>
+    </div>
+</div>
+
+<div class="column christmas crochet keychain">
+    <div class="content">
+        <img src="Pno_126.jpg" alt="Santa Hat Keychain" style="width:100%">
+        <h4>Product No. 126</h4>
+        <h4>Santa Hat Keychain</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column crochet keychain">
+    <div class="content">
+        <img src="Pno_127.jpg" alt="Tassel Keychain" style="width:100%">
+        <h4>Product No. 127</h4>
+        <h4>Tassel Keychain</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column earring flower crochet fall accessories">
+    <div class="content">
+        <img src="Pno_128.jpg" alt="Fall Flower Earing" style="width:100%">
+        <h4>Product No. 128</h4>
+        <h4>Fall Flower Earing</h4>
+        <p>₹150</p>
+    </div>
+</div>
+
+<div class="column accessories knitted">
+    <div class="content">
+        <img src="Pno_129.jpg" alt="Booties and Bonet (3 Piece)" style="width:100%">
+        <h4>Product No. 129</h4>
+        <h4>Booties and Bonet (3 Piece)</h4>
+        <p>₹350</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin">
+    <div class="content">
+        <img src="Pno_130.png" alt="Country Kitchen' Napkin" style="width:100%">
+        <h4>Product No. 130</h4>
+        <h4>Country Kitchen' Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin animal">
+    <div class="content">
+        <img src="Pno_131.png" alt="Rooster Napkin" style="width:100%">
+        <h4>Product No. 131</h4>
+        <h4>Rooster Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin flower">
+    <div class="content">
+        <img src="Pno_132.png" alt="Flowery Hat Napkin" style="width:100%">
+        <h4>Product No. 132</h4>
+        <h4>Flowery Hat Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin">
+    <div class="content">
+        <img src="Pno_133.jpg" alt="Lady on a Napkin" style="width:100%">
+        <h4>Product No. 133</h4>
+        <h4>Lady on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin flower">
+    <div class="content">
+        <img src="Pno_134.jpg" alt="Flower Bouquet Napkin" style="width:100%">
+        <h4>Product No. 134</h4>
+        <h4>Flower Bouquet Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin">
+    <div class="content">
+        <img src="Pno_135.jpg" alt="Fruit Napkin" style="width:100%">
+        <h4>Product No. 135</h4>
+        <h4>Fruit Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin">
+    <div class="content">
+        <img src="Pno_136.jpg" alt="Bicycle on a Napkin" style="width:100%">
+        <h4>Product No. 136</h4>
+        <h4>Bicycle on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin valentine">
+    <div class="content">
+        <img src="Pno_137.jpg" alt="Love' Napkin" style="width:100%">
+        <h4>Product No. 137</h4>
+        <h4>Love' Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin custom valentine">
+    <div class="content">
+        <img src="Pno_138.jpg" alt="Two Initials' Napkin" style="width:100%">
+        <h4>Product No. 138</h4>
+        <h4>Two Initials' Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_139.png" alt="Merry Christmas' Napkin" style="width:100%">
+        <h4>Product No. 139</h4>
+        <h4>Merry Christmas' Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+<div class="column">
+    <div class="content embroidery napkin christmas">
+        <img src="Pno_140.png" alt="Christmas Tree on a Napkin" style="width:100%">
+        <h4>Product No. 140</h4>
+        <h4>Christmas Tree on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_141.png" alt="Angel on a Napkin" style="width:100%">
+        <h4>Product No. 141</h4>
+        <h4>Angel on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_142.png" alt="Candle on a Napkin" style="width:100%">
+        <h4>Product No. 142</h4>
+        <h4>Candle on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_143.png" alt="Snowman on a Napkin" style="width:100%">
+        <h4>Product No. 143</h4>
+        <h4>Snowman on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_144.png" alt="Present on a Napkin" style="width:100%">
+        <h4>Product No. 144</h4>
+        <h4>Present on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_145.png" alt="Reindeer on a Napkin" style="width:100%">
+        <h4>Product No. 145</h4>
+        <h4>Reindeer on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column embroidery napkin">
+    <div class="content">
+        <img src="Pno_146.png" alt="Fruit Basket on a Napkin" style="width:100%">
+        <h4>Product No. 146</h4>
+        <h4>Fruit Basket on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+
+<div class="column crochet accessories decor">
+    <div class="content">
+        <img src="Pno_147.png" alt="Cake Toppers" style="width:100%">
+        <h4>Product No. 147</h4>
+        <h4>Cake Toppers (Set of 2)</h4>
+        <p>₹200</p>
+    </div>
+</div>
+
+<div class="column animal keychain crochet">
+    <div class="content">
+        <img src="Pno_148.png" alt="Jelly Fish Keychain" style="width:100%">
+        <h4>Product No. 148</h4>
+        <h4>Jelly Fish Keychain</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column easter flower animal plushie gnome crochet">
+    <div class="content">
+        <img src="Pno_149.png" alt="Easter Gnome" style="width:100%">
+        <h4>Product No. 149</h4>
+        <h4>Easter Gnome</h4>
+        <p>₹300</p>
+    </div>
+</div>
+<div class="column embroidery napkin christmas">
+    <div class="content">
+        <img src="Pno_150.png" alt="Snowflake on a Napkin" style="width:100%">
+        <h4>Product No. 150</h4>
+        <h4>Snowflake on a Napkin</h4>
+        <p>₹100</p>
+    </div>
+</div>
+<div class="column earring fall accessories crochet">
+    <div class="content">
+        <img src="Pno_151.jpg" alt="Acorn Earings" style="width:100%">
+        <h4>Product No. 151</h4>
+        <h4>Acorn Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column keychain crochet">
+    <div class="content">
+        <img src="Pno_152.jpg" alt="Tri-circle Keychain" style="width:100%">
+        <h4>Product No. 152</h4>
+        <h4>Tri-circle Keychain</h4>
+        <p>₹50</p>
+    </div>
+</div>
+<div class="column crochet flower accessories earring">
+    <div class="content">
+        <img src="Pno_153.jpg" alt="Mini Sunflower Earings" style="width:100%">
+        <h4>Product No. 153</h4>
+        <h4>Mini Sunflower Earings</h4>
+        <p>₹150</p>
+    </div>
+</div>
+<div class="column embroidery napkin valentine">
+    <div class="content">
+        <img src="Pno_154.jpg" alt="Valentine Napkin 3 Hearts" style="width:100%">
+        <h4>Product No. 154</h4>
+        <h4>Valentine Napkin 3 Hearts</h4>
+        <p>₹100</p>
+    </div>
+</div>
+<div class="column embroidery napkin valentine">
+    <div class="content">
+        <img src="Pno_155.jpg" alt="Valentine Napkin 2 Hearts" style="width:100%">
+        <h4>Product No. 155</h4>
+        <h4>Valentine Napkin 2 Hearts</h4>
+        <p>₹100</p>
+    </div>
+</div>
+<div class="column embroidery napkin valentine">
+    <div class="content">
+        <img src="Pno_156.jpg" alt="Valentine Napkin 1 Heart" style="width:100%">
+        <h4>Product No. 156</h4>
+        <h4>Valentine Napkin 1 Heart</h4>
+        <p>₹100</p>
+    </div>
+</div>
+<div class="column embroidery napkin valentine flower">
+    <div class="content">
+        <img src="Pno_157.jpg" alt="Valentine Napkin Flowers" style="width:100%">
+        <h4>Product No. 157</h4>
+        <h4>Valentine Napkin Flowers</h4>
+        <p>₹100</p>
+    </div>
+</div>    <!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+    filterSelection("all")
+    function filterSelection(categories) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+
+        for (i = 0; i < x.length; i++) {
+            var shouldShow = false;
+            for (var j = 0; j < categories.length; j++) {
+                if (x[i].classList.contains(categories[j])) {
+                    shouldShow = true;
+                    break;
+                }
+            }
+            if (shouldShow) {
+                x[i].style.display = "block";
+            } else {
+                x[i].style.display = "none";
+            }
+        }
+    }
+
+    function w3AddClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+        }
+    }
+
+    function w3RemoveClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+
+
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            var selectedCategories = this.getAttribute("data-categories").split(" ");
+            filterSelection(selectedCategories);
+        });
+    }
+ function filterSelection(c) {
+        var x, i;
+        x = document.getElementsByClassName("column");
+        if (c == "all") {
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "block";
+            }
+        } else {
+            for (i = 0; i < x.length; i++) {
+                if (x[i].className.indexOf(c) > -1) {
+                    x[i].style.display = "block";
+                } else {
+                    x[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<!--
+1	Tea Bag Book Mark
+2	Knitted Bunny
+3	Bunny Paper Weight
+4	Santa Ornament
+5	Trinket Basket
+6	Rudolf Ornament
+7	Snowman Ornament
+8	Santa Boot Ornament
+9	Christmas Tree Ornament
+10	Flower Hairband
+11	Flower Corsage
+12	Brachiosaurus
+13	Triceratops
+14	Stegosaurus
+15	T-Rex
+16	Baby Dino Nest
+17	Drawstring Bag
+18	Ring Pillow
+19	Heart cat
+20	Teddy Bear
+21	Embroidered Mark (Letters)
+22	Sea Turtles (Large/Small)
+23	Animal Coasters
+24	Mini Roses
+25	Angel Ornament
+26	Christmas Streamer
+27	Snow Globe Coasters
+28	Bell Ornament
+29	Icicle Ornament
+30	Wreath Ornament
+31	Candle Ornament
+32	Gingerbread Man Ornament
+33	Present Ornament
+34	Snowflake Ornament
+35	Star Streamer
+36	Blessed' Frame
+37	Merry Christmas' Frame
+38	Wavy Bookmark
+39	Easter Eggs
+40	Egg Caps
+41	Bumble Bee
+42	Phone Cover
+43	Cat Keychain
+44	Cactus Keychain
+45	Sushi Keychain
+46	Unicorn Pencil Topper
+47	Peas in a Pod
+48	Paw Keychain
+49	Owl Keychain
+50	Friendship Bands
+51	Cat Ear Clips
+52	Sheep Broche
+53	Bunny Napkin
+54	Whale
+55	Mini Coasters
+56	Pumpkin Coasters
+57	Halloween Gnome
+58	Mini Pumpkins
+59	Squash Plushie
+60	"Pumpkin Plushie
+ (Large/Medium/Small)"
+61	Star Ornaments
+62	Pumpkin Keychain
+63	Watermelon Earings
+64	Tamaring Earings
+65	Monstera Earings
+66	Tri-circle Earings
+67	Angel Earings
+68	Fall Leaf Earings
+69	Mini flower Earings
+70	Sun drop Earings
+71	Tree Ornaments
+72	Nativity Scene (3 Piece)
+73	 Trees
+74	Angle Plushie
+75	Bride and Groom
+76	Bead-Flowers Earings
+77	Love Birds
+78	Mermaid Tale Keychain
+79	Heart Plushie
+80	Cross Bookmarks
+81	Bunny Easter Eggs (Small/Large)
+82	Hen Coasters
+83	Ash Leaf Earings
+84	Sun Flower Earings
+85	Sun Pendant
+86	Mermaid Bookmark
+87	Lizard Bookmark
+88	Mouse Bookmark
+89	Lion Bookmark
+90	Elephant Bookmark
+91	Harry Potter Bookmark
+92	Unicorn Bookmark
+93	Hoop Earings
+94	Mini Flower Hairband
+95	Jelly Fish Earing
+96	Spider Web Coasters
+97	Wall Décor
+98	Three Kings (3 Piece)
+99	Shepherds (2 Piece)
+100	Sheep (2 Piece)
+101	Palm Tree
+102	Nativity Angel
+103	Nativity Scene (13 Pieces)
+104	Santa Gnome
+105	Christmas Tree Gnome
+106	Reindeer Gnome
+107	Alphabet Keychain
+108	Names of Napkins
+109	Oak Leaf Earings
+110	Paper Weight Cat On Pillow
+111	Curtain Holders
+112	Trophy Keychain
+113	Bubble Tea Keychain
+114	Bow Hairband
+115	Tri-Fish Keychain
+116	Interlocked Earings
+117	Rainbow Keychain
+118	White Flower Coaster
+119	Knitted Bookmark
+120	Fish Pendant
+121	Egg Décor
+122	Gift Bag
+123	Diamond Earing
+124	Bunny Décor
+125	Dog Plushie
+126	Santa Hat Keychain
+127	Tassel Keychain
+128	Fall Flower Earing
+129	Booties and Bonet (3 Piece)
+130	Country Kitchen' Napkin
+131	Rooster Napkin
+132	Flowery Hat Napkin
+133	Lady on a Napkin
+134	Flower Bouquet Napkin
+135	Fruit Napkin
+136	Bicycle on a Napkin
+137	Love' Napkin
+138	Two Initials' Napkin
+139	Merry Christmas' Napkin
+140	Christmas Tree on a Napkin
+141	Angel on a Napkin
+142	Candle on a  Napkin
+143	Snowman on a Napkin
+144	Present on a Napkin
+145	Reindeer on a Napkin
+146	Fruit Basket on a Napkin
+147	Cake Toppers
+148	Jelly Fish Keychain
+
+-->
+<br>
+ <!-- Footer -->
+  <footer class="footer">
+  <div class="contact-info">
+    <b><p style="color:#4b63cc;">Email:</p></b><p><a href="mailto:knittingnestshopnow@gmail.com" target="_top"> knittingnestshopnow@gmail.com</p></a>
+    <b><p style="color:#4b63cc;">Phone:</p></b><p style="color:#f33a91;"> +919822057188</p>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2023 Knitting Nest. All rights reserved.</p>
+    <p>Coded by <a href="About_Us.html">Claire & Grace Fernandes</a></p>
+  </div>
+</footer>
+<button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+<script>	
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+	</body>
+</html>

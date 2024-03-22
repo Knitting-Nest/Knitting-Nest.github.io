@@ -1,0 +1,201 @@
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69533C;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+width:100%;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Andale Mono, monospace;
+  /* background-color: #ffc9f8; */
+}
+
+img.Logo {
+  border-radius: 300px;
+  width: 20px;
+}
+
+img.insta {
+  width: 20px;
+  border-radius: 5px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 15px;
+  left: 20px;
+  z-index: 1;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: #69533C;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 300px;
+}
+
+#myBtn:hover {
+  background-color: white;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #69533C;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #00000087;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  background-color: WHITE;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color: #9997a163;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Create a right-aligned (split) link inside the navigation bar */
+.navbar a.split {
+  float: right;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.footer a {
+  color: #FFF7C2;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: #69533C;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 10px;
+}
+
+@media (max-width: 600px) {
+  .contact-info {
+    flex-direction: column;
+  }
+}
+
+.footer p {
+  text-align: center;
+  color: white;
+}
+
+.footer .copyright {
+  margin-top: 10px;
+}

@@ -1,310 +1,539 @@
-<!DOCTYPE html>
-<head>
-		<title> Knitting Nest </title>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Knitting Nest</title>
 		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="Common.css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.navbar {
+  line-height: 1.6;
 }
 
+.bgimg {
 
-
-.waviy span {
-  font-family: Copperplate, Papyrus, fantasy;
-  position: relative;
-  display: inline-block;
-  color:rgba(77, 77, 77, 0.93);
- /* text-transform: uppercase;*/
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
- font-size: 30px;
-  
-}
-@keyframes waviy {
-  0%,40%,100% {
-    transform: translateY(0)
-  }
-  20% {
-    transform: translateY(-20px)
-  }
-}
-
-
-
-			body{
-         			background-image: url('Background_image13.png');
-
- 
-  font-family:Copperplate, Papyrus, fantasy;
+  /*background-image: /* linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 17, 89, 0.5)),*/ url("background.png");*/
+  height: 100%;
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
-			}
-
-
-			p.h12{
-				Text-SHADOW:6px 2px 4px 8px rgba(50, 0, 61, 0.35);
-				color:rgba(84, 49, 70, 0.66);
-				font-size:50px;
-			}
-			img.image1{
-
-				WIDTH:70px;
-
-				BORDER-RADIUS:200px;
-
-			}
-			p.Copyright{
-
-				background-color:rgba(18, 7, 14, 0.55);
-				height: 30px;
-				width:1500px;
-				color:rgb(243, 242, 255);
-				position: fixed;
-   				top: 91%;
-                        left:1%;
-
-			}
-			p.p2{
-color:rgba(77, 77, 77, 0.93);
-font-size:17px;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.navbar{
-  height: 80px;
-  width: 100%;
-  padding: 10px 30px;
-  background-color:rgba(59, 17, 27, 0.51);
   position: relative;
-}
-.navbar .nav-header{
-  display: inline;
-}
-.navbar .nav-header .nav-logo{
-  display: inline-block;
-  margin-top: -7px;
-}
-.navbar .nav-links{
-  display: inline;
-  float: right;
-  font-size: 18px;
-}
- 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.navbar .nav-links a {
-  padding: 10px 12px;
-  text-decoration: none;
-  font-weight: 550;
   color: white;
+  font-family: 	 Andale Mono, monospace;
+  font-size: 25px;
 }
-/* Hover effects */
-.navbar .nav-links a:hover{
-  background-color: rgba(0, 0, 0, 0.3);
-}
- 
-/* responsive navbar toggle button */
-.navbar #nav-check, .navbar .nav-btn{
-  display: none;
-}
- 
-@media (max-width:700px) {
-  .navbar .nav-btn{
-    display: inline-block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-  }
-  .navbar .nav-btn label {
-    display: inline-block;
-    width: 80px;
-    height: 70px;
-    padding: 25px;
-  }
-  .navbar .nav-btn label span {
-    display: block;
-    height: 10px;
-    width: 25px;
-    border-top: 3px solid #eee;
-  }
-  .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label {
-    background-color: rgb(9, 14, 90);
-    transition: all 0.5s ease;
-  }
-  .navbar .nav-links{
-    position: absolute;
-    display: block;
-    text-align: center;
-    width: 50%;
-    background-color: rgb(95, 85, 99);
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 70px;
-    right: 0px;
-  }
-  .navbar .nav-links a {
-    display: block;
-  }
- 
-  /* when nav toggle button not checked */
-  .navbar #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
- 
-  /* when nav toggle button is checked */
-  .navbar #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 70px);
-    overflow-y: auto;
-  }
-
-  /* Responsive dropdown code */
-  .navbar .nav-links .dropdown, .navbar .nav-links .dropdown2 {
-    float: none;
-    width: 100%;
-  }
-  .navbar .nav-links .drop-content, .navbar .nav-links .drop-content2 {
-    position: relative;
-    background-color: rgb(220, 220, 250);
-    top: 0px;
-    left: 0px;
-  }
-  /* Text color */
-  .navbar .nav-links .drop-content a {
-    color: rgb(9, 14, 90);
-  }  
- 
-}
- 
-/* Dropdown menu CSS code */
-.dropdown{
-  position: relative;
-  display: inline-block;
-}
-.drop-content, .drop-content2 {
-  display: none;
+.middle {
   position: absolute;
-  background-color:rgb(95, 85, 99);
-  min-width: 120px;
-  font-size: 19px;
-  top: 34px;
-  z-index: 1;
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*text-align: center;
+  color: #F4E9EC;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;*/
 }
-/* on hover show dropdown */
-.dropdown:hover .drop-content, .dropdown2:hover .drop-content2 {
-  display: block;
-}
- .navbar .nav-links .loginBtn {
-    padding: 10px 40px ;
-    margin: 20px;
-    font-size:  18px;
-    font-weight: bold;
-    color: rgb(9, 14, 90);
-  }
-/* drondown links */
-.drop-content a {
-  padding: 12px 10px;
-  border-bottom: 1px solid rgb(197, 197, 250);
-  display: block;
-  transition: all 0.5s ease !important;
-}
-.dropBtn .drop-content a:hover {
-  background-color: rgb(230, 230, 230);
-}
-.dropdown:hover .dropBtn, .dropdown2:hover .dropBtn2 {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.dropBtn2 i {
-  margin-left: 15px;
-}
-.navbar .nav-links .loginBtn{
-  display: inline-block;
-  padding: 5px 15px;
-  margin-left: 20px;
-  font-size: 17px;
-  color: rgb(9, 14, 90);
+
+hr {
+  margin: auto;
+
+  width: 40%;
 }
 
 
-.responsive {
-  max-width: 100%;
-  height: auto;
-}
-.notification {
 
 
+/* Slideshow container */
+.slideshow-container {
   position: relative;
-  display: inline-block;
-
+  background: #f3820047;
 }
 
-.notification:hover {
-  background: red;
-
-}
-
-.notification .badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  padding:0px 5px;
-  border-radius: 100%;
-  background: red;
-  color: white;
-}
-
-.responsive {
-  width: 100%;
-  max-height: 100px;
-  height:100%;
-}
-img.sub{
-	height:50%;
-	width:99%;
-	max-height:150px;
-}
-img.imgupdate{
-	height:auto;
-	width:40%;
-
-}
-
-#myBtn {
+/* Slides */
+.mySlides {
   display: none;
-  position: fixed;
-  bottom: 90px;
-  right: 15px;
-  z-index: 99;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
   font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #b86200bc;
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1f1;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: rgba(160, 159, 149, 1);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;
+  font-weight: bold;
+color:black;}
+
+<!--/* Add a blue color to the author */
+.author {color: cornflowerblue;}-->
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h3,p {
+
+  word-break: break-all;
+  font-family: 	 Andale Mono, monospace;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+ padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+img{border-radius:10px;}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
   border: none;
   outline: none;
-  background-color: rgba(133, 8, 79, 0.71);
-  color: white;
+  padding: 12px 16px;
+  background-color: white;
   cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  font-family: 	 Andale Mono, monospace;
 }
 
-#myBtn:hover {
-  background-color: #555;
+.btn:hover {
+  background-color: #f3820047	;
+  font-family: 	 Andale Mono, monospace;
+
+}
+
+.btn.active {
+  background-color: #b86200bc;
+  font-family: 	 Andale Mono, monospace;
+  color: white;
+}
+
+
+
+.video-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+}
+.video-container video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%; 
+  min-height: 100%; 
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+
+  /* Center the video */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 </style>
-</head>
-<body>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Back To Top</button>
+	</head>
+	<body>
+
+
+
+<div class="navbar" id="navbar">
+  <a href="Home_page.html">Home</a>
+  <a href="About_Us.html">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown▾
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="Shop_now.html">Shop Now</a><br>
+      <a href="Experiences.html">Experiences</a>
+    </div>
+</div>
+  <a href="Help.html">Help</a>
+ <a href="https://forms.gle/ZoKD24cb8btnorFQ7"><b>Order Now</b></a>
+  <a href="https://www.instagram.com/knittingnestshopnow/" ><img src="insta.png" alt="Instagram" class="insta" ></a>
+   <a href="Home_page.html" class="split"><img class="Logo" src="Logo.png" alt="Our Logo"></a>
+<!---->
+</div>
+
+<div class="video-container">
+  <video autoplay muted loop>
+ <source src="background.mp4" type="video/mp4">
+  </video>
+</div>
+  <div class="middle">
+<br>
+    <img style="height:100%;" src="Word_Logo.png">
+</div>
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+
+</script>
+<center>
+<b>
+<p style="padding:0px 0px 0px 20px;font-size:150%;">Best Sellers</p>
+<hr>
+<br>
+
+<div style="padding:20px;">
+<div id="myBtnContainer">
+<b>
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('nature')">New Releases</button>
+  <button class="btn" onclick="filterSelection('cars')">Best Sellers</button>
+</b>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="Pno_86.jpg" alt="New Release" style="max-height:150px">
+<b>	
+    <!--<h3>Product No. 86</h3>-->
+      <h3>Mermaid Bookmark</h3>
+</b>
+      <p>₹250/-Each</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="Pno_79.jpg" alt="New Release" style="max-height:150px">
+<b>
+<!--<h3>Product No. 79</h3>-->
+      <h3>Heart Plushie</h3>
+</b>
+      <p>₹300/-Each</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="Pno_78.jpg" alt="New Release" style="max-height:150px">
+<b>
+<!--<h3>Product No. 78</h3>-->
+      <h3>Mermaid tail Keychain</h3>
+</b>
+      <p>150/-Each</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="Pno_123.jpg" alt="New Release" style="max-height:150px">
+<b>
+<!--<h3>Product No. 123</h3>-->
+      <h3>Diamond Earrings</h3>
+</b>
+      <p>₹150/-A Pair</p>
+    </div>
+  </div> 
+  <div class="column nature">
+    <div class="content">
+    <img src="Pno_85.jpg" alt="New Release" style="max-height:150px">
+<b>
+<!--<h3>Product No. 85</h3>-->
+      <h3>Sun Pendent</h3>
+</b>
+      <p>₹150/-Each</p>
+    </div>
+  </div>  
+  <div class="column nature">
+    <div class="content">
+    <img src="Pno_88.jpg" alt="New Release" style="max-height:150px">
+<b>
+<!--<h3>Product No. 88</h3>-->
+      <h3>Mouse Bookmark</h3>
+</b>
+      <p>₹250/-Each</p>
+    </div>
+  </div>  
+ 
+
+  <div class="column cars">
+    <div class="content">
+      <img src="Pno_6.jpg" alt="Best Seller" style="max-height:150px">
+<b>
+<!--<h3>Product No. 6</h3>-->
+      <h3>Rudolf Ornament</h3>
+</b>      <p>₹25/-Each</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="Pno_7.jpg" alt="Best Seller" style="max-height:150px">
+<b>
+<!--<h3>Product No. 7</h3>-->
+      <h3>Snowman Ornament</h3>
+</b>      <p>₹25/-Each</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="Pno_5.jpg" alt="Best Seller" style="max-height:150px">
+<b>
+<!--<h3>Product No. 5</h3>-->
+      <h3>Trinket Basket</h3>
+</b>      <p>₹250/- Each</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="Pno_49.jpg" alt="Best Seller" style="max-height:150px">
+<b>
+<!--<h3>Product No. 49</h3>-->
+      <h3>Owl Keychains</h3>
+</b>      <p>₹100/-Each</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="Pno_72.jpg" alt="Best Seller" style="max-height:150px">
+<b>
+<!--<h3>Product No. 72</h3>-->
+      <h3>Nativity Scene</h3><h3> (3 Piece)</h3>
+</b>      <p>₹350/-Each</p>
+    </div>
+  </div>
+
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+</div>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+<p style="padding:0px 0px 0px 20px;font-size:150%;">Reviews</p>
+<hr>
+<br>
+</center>
+
+</b>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides">
+  <q>Well designed merchandise site... Appreciating your efforts in designing this.. Kudos to you both</q>
+
+</div>
+
+<div class="mySlides">
+  <q>Thank you Claire and Grace for the beautifull Christmas decorations. I'm sure my friend will be thriled with these gifts.</q>
+
+</div>
+
+<div class="mySlides">
+  <q>Hi , I got the earrings and I really loved them and the website. It was amazing! Thank you for unique design for me.</q>
+
+</div>
+<div class="mySlides">
+  <q>We received the package from you...Wonderful venture and amazing work👍💖.</q>
+
+</div>
+<div class="mySlides">
+  <q>Received the packets, the bookmarks are professional and make an excellent gift. My grandniece from Jamshedpur was visiting and I gave her one.
+Thank you</q>
+
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+
+ <!-- Footer -->
+  <footer class="footer">
+  <div class="contact-info">
+    <b><p style="color:#4b63cc;">Email:</p></b><p><a href="mailto:knittingnestshopnow@gmail.com" target="_top"> knittingnestshopnow@gmail.com</p></a>
+    <b><p style="color:#4b63cc;">Phone:</p></b><p style="color:#f33a91;"> +919822057188</p>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2023 Knitting Nest. All rights reserved.</p>
+    <p>Coded by <a href="About_Us.html">Claire & Grace Fernandes</a></p>
+  </div>
+</footer>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
 <script>
 //Get the button
 var mybutton = document.getElementById("myBtn");
@@ -326,140 +555,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
-<center>
-<br>
-<br>
-<STRONG>
-<b>
-<h1 style="font-size:70px; font-family:Brush Script MT, Brush Script Std, cursive; color:rgb(158, 57, 97);">Knitting Nest</h1>
-</b>
-<br>
- <div class="waviy">
 
-   <span style="--i:1">A</span>
-   <span style="--i:1"></span>
-   <span style="--i:1"></span>
-   <span style="--i:1">S</span>
-   <span style="--i:2">T</span>
-   <span style="--i:3">I</span>
-   <span style="--i:4">T</span>
-   <span style="--i:5">C</span>
-   <span style="--i:6">H</span>
-   <span style="--i:1"></span>
-   <span style="--i:1"></span>
-   <span style="--i:1">away</span>
-   <span style="--i:1"></span>
-   <span style="--i:1"></span>
-   <span style="--i:1">from</span>
-   <span style="--i:1"></span>
-   <span style="--i:1"></span>
-   <span style="--i:1">you</span>
-
-  </div>
-
-
-
-</STRONG>
-<br>
-
-
-</center>
-<font face="Copperplate, Papyrus, fantasy">
- <div class="navbar">
- 
-    <!-- Navbar logo -->
-    <div class="nav-header">
-      <div class="nav-logo">
-        <a href="Home_page.html">
-			<img class="image1" src="Knitting_Nest_Logo.png" alt="Our Logo">
-        </a>
-      </div>
-    </div>
-
-
-    <!-- responsive navbar toggle button -->
-    <input type="checkbox" id="nav-check">
-    <div class="nav-btn">
-      <label for="nav-check">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-    </div>
- 
-    <!-- Navbar items -->
-    <div class="nav-links">
-      <a href="Home_page.html">Home</a>
-
- 
-      <!-- Dropdown menu -->
-      <div class="dropdown">
-        <a class="dropBtn" href="#">About Us
-          <i class="fas fa-angle-down"></i>
-        </a>
-        <div class="drop-content">
-          <a href="About_Us.html">Our Journey</a>
-          <a href="Our_Customers.html">Our Customers</a>
-            </div>
-          </div>
-      <div class="dropdown">
-        <a class="dropBtn" href="#">Shop
-          <i class="fas fa-angle-down"></i>
-        </a>
-        <div class="drop-content">
-          <a href="Shop_Now.html">Catalogue</a>
-          <a href="Best_Sellers.html">Best Sellers</a>
-	          <a href="Reviews.html">Customer Reviews</a>
-            </div>
-          </div>
-
-<a href="New.html" class="notification">
-  <span>Updates</span>
-  <span class="badge">3</span>
-</a>
-          <a href="Contact_Us.html">Contact Us</a>
-      <a href="https://forms.office.com/r/bsVdRqBQfr"><button class="loginBtn">Click To Order</button></a>
- 
-
- 
-  </div>
-
-		<center>
-
-<font fact="Copperplate, Papyrus, fantasy">
-
-<br>
-<br>
-<b>
-<STRONG>
-<p class="h12" style="font-size:18px;">We believe handmade is better.<br>Each of our products are handcrafted with love.</p>
-</font>
-</STRONG>
-</b>
-<br>
-
-<b>
-<p>Created By: Claire & Grace Fernandes</p>
-			<p>Last Updated: 21st February 2023</p></b>
-			<br>
-
-<a href="https://www.instagram.com/knittingnestshopnow/"><img class="image1" src="Insta.png" alt="Instagram image"><b><p style="font-size:10px;">We are now on Instagram!</p></b></a><br>
-<img class="sub" src="Sub_Background2.png" alt="Sub Background">
-<br>
-<br>
-<br>
-<img class="imgupdate" src="New_Christmas.gif" alt="">
-<br>
-<br>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-</font>
-</center>
-
-</body>
+	</body>
 </html>

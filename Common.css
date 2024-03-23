@@ -1,4 +1,5 @@
 
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -18,7 +19,74 @@
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
+.dropdown {
+  float: left;
+  overflow: hidden;
+  border: 2px solid #69533C; /* Add border style */
+  border-radius: 10px; /* Add border radius */
+}
 
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 10px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #69533C;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: 2px solid #69533C; /* Add border style */
+  border-radius: 10px; /* Add border radius */
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Add transparent border */
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none; /* Remove border from last link */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 16px 16px;
+  text-decoration: none;
+  display: block;
+  width:100%;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -45,6 +113,8 @@ width:100%;
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
 body, html {
   height: 100%;
   margin: 0;

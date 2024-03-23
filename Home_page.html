@@ -493,6 +493,33 @@ Thank you</q>
 </div>
 
 <script>
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") {
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "block";
+    }
+  } else {
+    for (i = 0; i < x.length; i++) {
+      if (x[i].className.indexOf(c) > -1) {
+        x[i].style.display = "block";
+      } else {
+        x[i].style.display = "none";
+      }
+    }
+  }
+
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("myBtnContainer");
+  var btns = btnContainer.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("active");
+    if (btns[i].getAttribute("onclick").includes(c)) {
+      btns[i].classList.add("active");
+    }
+  }
+}
 var slideIndex = 1;
 showSlides(slideIndex);
 

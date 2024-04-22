@@ -1,30 +1,14 @@
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
 
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 10px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
+/* Style for dropdown menu */
 .dropdown {
-  float: left;
-  overflow: hidden;
+  float: left; /* Make dropdowns float to the left */
+  overflow: hidden; /* Hide overflow content */
   border: 2px solid #69533C; /* Add border style */
   border-radius: 10px; /* Add border radius */
 }
 
+/* Style for dropdown button */
 .dropdown .dropbtn {
   font-size: 16px;  
   border: none;
@@ -36,20 +20,24 @@
   margin: 0;
 }
 
+/* Change background color on hover for navbar links and dropdown button */
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
 }
 
+/* Style for dropdown content */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #69533C;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add box shadow */
   z-index: 1;
   border: 2px solid #69533C; /* Add border style */
   border-radius: 10px; /* Add border radius */
 }
+
+/* Style for dropdown content links */
 .dropdown-content a {
   float: none;
   color: black;
@@ -61,76 +49,41 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Add transparent border */
 }
 
+/* Remove border from last link in dropdown content */
 .dropdown-content a:last-child {
-  border-bottom: none; /* Remove border from last link */
+  border-bottom: none;
 }
 
+/* Change background color on hover for dropdown content links */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 16px 16px;
-  text-decoration: none;
-  display: block;
-  width:100%;
-  text-align: center;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #69533C;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 16px 16px;
-  text-decoration: none;
-  display: block;
-width:100%;
-  text-align: center;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
+/* Display dropdown content on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
+/* General styles for body and HTML */
 body, html {
   height: 100%;
   margin: 0;
   font-family: Andale Mono, monospace;
-  /* background-color: #ffc9f8; */
 }
 
+/* Styles for logo image */
 img.Logo {
   border-radius: 300px;
   width: 20px;
 }
 
+/* Styles for Instagram icon image */
 img.insta {
   width: 20px;
   border-radius: 5px;
 }
 
+/* Styles for "Back to Top" button */
 #myBtn {
   display: none;
   position: fixed;
@@ -152,10 +105,12 @@ img.insta {
   color: black;
 }
 
+/* Box sizing property for all elements */
 * {
   box-sizing: border-box;
 }
 
+/* Styles for navigation bar */
 .navbar {
   overflow: hidden;
   background-color: #69533C;
@@ -171,12 +126,13 @@ img.insta {
   text-decoration: none;
 }
 
+/* Change background color on hover for navbar links and dropdown button */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
   background-color: #00000087;
 }
 
-/* Create three equal columns that floats next to each other */
+/* Styles for columns */
 .column {
   float: left;
   width: 33.33%;
@@ -205,7 +161,7 @@ img.insta {
   clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+/* Responsive layout for columns */
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -213,12 +169,13 @@ img.insta {
   }
 }
 
-/* Create a right-aligned (split) link inside the navigation bar */
+/* Styles for right-aligned link inside the navigation bar */
 .navbar a.split {
   float: right;
   color: white;
 }
 
+/* Sticky navigation */
 .sticky {
   position: fixed;
   top: 0;
@@ -229,6 +186,7 @@ img.insta {
   padding-top: 60px;
 }
 
+/* Styles for footer links */
 .footer a {
   color: #FFF7C2;
   text-decoration: none;
@@ -238,12 +196,14 @@ img.insta {
   text-decoration: underline;
 }
 
+/* Styles for footer */
 .footer {
   background-color: #69533C;
   padding: 20px;
   text-align: center;
 }
 
+/* Styles for contact information */
 .contact-info {
   display: flex;
   justify-content: center;
@@ -254,6 +214,7 @@ img.insta {
   margin: 5px 10px;
 }
 
+/* Responsive layout for contact information */
 @media (max-width: 600px) {
   .contact-info {
     flex-direction: column;

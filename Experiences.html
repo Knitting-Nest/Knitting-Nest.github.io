@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Knitting Nest</title>
-		<link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
-		<link href="Common.css" rel="stylesheet">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <title>Knitting Nest</title>
+  <link rel="icon" type="images/Knitting_Nest_Logo.png" href="Knitting_Nest_Logo.png">
+  <link href="Common.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 .navbar {
   line-height: 1.6;
@@ -14,35 +14,31 @@
 }
 body {
   margin: 0;
-
 }
 .header {
   text-align: center;
   padding: 32px;
 }
-
-        .row {
-            max-width: 2000px; /* Set the maximum width of the container */
-            margin: 0 auto; /* Center the container horizontally */
-            padding: 0 20px; /* Add some padding to the container */
-            display: flex; /* Use flexbox to arrange items */
-            flex-wrap: wrap; /* Allow items to wrap to the next row */
-            justify-content: space-between; /* Space items evenly between each other */
-            margin-bottom: 1900px; /* Add bottom margin to create space between the images and the footer */
-        }
-
-        /* Create four equal columns that sit next to each other */
-        .column {
-            flex: 0 0 calc(25% - 20px); /* 25% width with margin */
-            max-width: calc(25% - 20px); /* Maximum width with margin */
-            margin-bottom: 40px; /* Add bottom margin to create space between rows */
-            padding: 0 10px; /* Add padding to each column */
-        }
-
-        .column img {
-            width: 100%; /* Make images fill the column width */
-            display: block; /* Ensure images don't have extra space below */
-        }
+.row {
+  max-width: 2000px; /* Set the maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 0 20px; /* Add some padding to the container */
+  display: flex; /* Use flexbox to arrange items */
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  justify-content: space-between; /* Space items evenly between each other */
+  margin-bottom: 1900px; /* Add bottom margin to create space between the images and the footer */
+}
+/* Create four equal columns that sit next to each other */
+.column {
+  flex: 0 0 calc(25% - 20px); /* 25% width with margin */
+  max-width: calc(25% - 20px); /* Maximum width with margin */
+  margin-bottom: 40px; /* Add bottom margin to create space between rows */
+  padding: 0 10px; /* Add padding to each column */
+}
+.column img {
+  width: 100%; /* Make images fill the column width */
+  display: block; /* Ensure images don't have extra space below */
+}
 /* Define styles for columns */
 .column {
     flex: 0 0 calc(25% - 20px);
@@ -50,7 +46,6 @@ body {
     margin-bottom: 45px;
     padding: 0 10px;
 }
-
 /* Responsive layout for laptops */
 @media screen and (max-width: 1200px) {
     .column {
@@ -58,7 +53,6 @@ body {
         max-width: calc(33.33% - 20px);
     }
 }
-
 /* Responsive layout for tablets */
 @media screen and (max-width: 800px) {
     .column {
@@ -66,7 +60,6 @@ body {
         max-width: calc(50% - 20px);
     }
 }
-
 /* Responsive layout for phones */
 @media screen and (max-width: 600px) {
     .column {
@@ -74,7 +67,6 @@ body {
         max-width: calc(100% - 20px);
     }
 }
-
 /* Adjust spacing between images and footer */
 .row {
     max-width: 2000px;
@@ -85,7 +77,6 @@ body {
     justify-content: space-between;
     margin-bottom: 1900px; /* Default margin-bottom */
 }
-
 /* Adjust margin-bottom for smaller screens */
 @media screen and (max-width: 800px) {
     .row {
@@ -94,135 +85,81 @@ body {
 }
 hr {
   margin: auto;
-
   width: 40%;
 }
-
-/* Create four equal columns that sits next to each other */
-.column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
-}
 </style>
-	</head>
-	<body>
+</head>
+<body>
 <div class="navbar" id="navbar">
-
   <div class="dropdown">
-       <button class="dropbtn">☰
-  <i class="fa fa-caret-down"></i>
-</button>
+    <button class="dropbtn">☰
+      <i class="fa fa-caret-down"></i>
+    </button>
     <div class="dropdown-content">
-  <a href="Home_page.html">Home</a>
-  <a href="About_Us.html">About Us</a>
+      <a href="Home_page.html">Home</a>
+      <a href="About_Us.html">About Us</a>
       <a href="Shop_now.html">Shop Now</a><br>
       <a href="Experiences.html">Experiences</a>
-<a href="Help.html">Help</a>
- <a href="https://forms.gle/ZoKD24cb8btnorFQ7"><b>Order Now</b></a>
-  <a href="https://www.instagram.com/knittingnestshopnow/" ><img src="insta.png" alt="Instagram" class="insta" ></a>
+      <a href="Help.html">Help</a>
+      <a href="https://forms.gle/ZoKD24cb8btnorFQ7"><b>Order Now</b></a>
+      <a href="https://www.instagram.com/knittingnestshopnow/"><img src="insta.png" alt="Instagram" class="insta"></a>
     </div>
+  </div>
+  <a href="Home_page.html" class="split"><img class="Logo" src="Logo.png" alt="Our Logo"></a>
 </div>
-  
-   <a href="Home_page.html" class="split"><img class="Logo" src="Logo.png" alt="Our Logo"></a>
-
-</div>
-
-
 <!-- Header -->
 <div class="header">
-
-
-  <h1 style="color:Brown;text-align: center;font-family: "Courier New", Courier, monospace;">Orders</h1>
-<hr>
-
+  <h1 style="color:Brown;text-align: center;font-family: 'Courier New', Courier, monospace;">Orders</h1>
+  <hr>
 </div>
-
 <!-- Photo Grid -->
 <div class="row"> 
   <div class="column">
-
     <img src="Expo4.jpg" style="width:100%">
-<img src="Expo10.jpg" style="width:100%">
-<img src="Expo21.jpg" style="width:100%">
-<img src="Expo19.jpg" style="width:100%">
-<img src="Expo16.png" style="width:100%">
+    <img src="Expo10.jpg" style="width:100%">
+    <img src="Expo21.jpg" style="width:100%">
+    <img src="Expo19.jpg" style="width:100%">
+    <img src="Expo16.png" style="width:100%">
   </div>
   <div class="column">
-  <img src="Expo26.jpg" style="width:100%">
+    <img src="Expo26.jpg" style="width:100%">
     <img src="Expo22.jpg" style="width:100%">
-<img src="Expo18.jpg" style="width:100%">
-<img src="Expo24.jpg" style="width:100%">
+    <img src="Expo18.jpg" style="width:100%">
+    <img src="Expo24.jpg" style="width:100%">
     <img src="Expo3.jpg" style="width:100%">
   </div>  
   <div class="column">
- 
-<img src="Expo5.png" style="width:100%">
-<img src="Expo20.jpg" style="width:100%">
-<img src="Expo13.png" style="width:100%">
-<img src="Expo11.jpg" style="width:100%">
-
-
-
+    <img src="Expo5.png" style="width:100%">
+    <img src="Expo20.jpg" style="width:100%">
+    <img src="Expo13.png" style="width:100%">
+    <img src="Expo11.jpg" style="width:100%">
   </div>
   <div class="column">
-  <img src="Expo25.jpg" style="width:100%">
-
-<img src="Expo14.jpg" style="width:100%">
-<img src="Expo28.jpg" style="width:100%">
-<img src="Expo15.jpg" style="width:100%">
-
-<img src="Expo23.jpg" style="width:100%">
+    <img src="Expo25.jpg" style="width:100%">
+    <img src="Expo14.jpg" style="width:100%">
+    <img src="Expo28.jpg" style="width:100%">
+    <img src="Expo15.jpg" style="width:100%">
+    <img src="Expo23.jpg" style="width:100%">
   </div>
 </div>
-
 <br>
- <!-- Footer -->
-  <footer class="footer">
+<!-- Footer -->
+<footer class="footer">
   <div class="contact-info">
-    <b><p style="color:#4b63cc;">Email:</p></b><p><a href="mailto:knittingnestshopnow@gmail.com" target="_top"> knittingnestshopnow@gmail.com</p></a>
-    <b><p style="color:#4b63cc;">Phone:</p></b><p style="color:#f33a91;"> +919822057188</p>
+    <b><p style="color:#4b63cc;">Email:</p></b><p><a href="mailto:knittingnestshopnow@gmail.com" target="_top">knittingnestshopnow@gmail.com</a></p>
+    <b><p style="color:#4b63cc;">Phone:</p></b><p style="color:#f33a91;">+919822057188</p>
   </div>
   <div class="copyright">
-
     <p>Coded by <a href="About_Us.html">Claire & Grace Fernandes</a></p>
     <p>&copy; 2023 Knitting Nest. All rights reserved.</p>
-<br>
   </div>
 </footer>
 <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
-<script>	
+<script>
 //Get the button
 var mybutton = document.getElementById("myBtn");
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
-
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -230,15 +167,12 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 </script>
-
-
-
-	</body>
+</body>
+</html>
 

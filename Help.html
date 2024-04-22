@@ -6,8 +6,7 @@
   <link href="Common.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    
-    /* Help Section styles */
+    /* Styles for the Help Section */
     .help-section {
       background-color: #f1f1f1; /* Light gray background */
       margin: 20px auto;
@@ -15,26 +14,26 @@
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       max-width: 600px;
-font-family: "Courier New", Courier, monospace;
+      font-family: "Courier New", Courier, monospace;
     }
 
     .help-section h3 {
       color: #4b63cc; /* Dark blue for section headings */
       font-size: 20px;
       margin-top: 0;
-font-family: "Courier New", Courier, monospace;
+      font-family: "Courier New", Courier, monospace;
     }
 
     .help-section p {
       color: #333; /* Dark gray text color */
       font-size: 16px;
-font-family: "Courier New", Courier, monospace;
+      font-family: "Courier New", Courier, monospace;
     }
 
+    /* Styles for collapsible button */
     .collapsible {
-background-color: #977754;
-font-family: "Courier New";
-    
+      background-color: #977754;
+      font-family: "Courier New";
       color: white;
       cursor: pointer;
       padding: 18px;
@@ -44,21 +43,22 @@ font-family: "Courier New";
       outline: none;
       font-size: 16px;
       transition: background-color 0.3s;
-border-radius: 5px;
-
+      border-radius: 5px;
     }
-.navbar {
-  line-height: 1.6;
-}
+
+    .navbar {
+      line-height: 1.6;
+    }
+
     .active, .collapsible:hover {
- background-color: #78522a7f;
+      background-color: #78522a7f;
     }
 
-hr {
-  margin: auto;
+    hr {
+      margin: auto;
+      width: 40%;
+    }
 
-  width: 40%;
-}
     .content {
       padding: 0 18px;
       display: none;
@@ -66,14 +66,13 @@ hr {
       background-color: #f1f1f1;
     }
 
-        /* Scroll-to-top button */
+    /* Scroll-to-top button */
 
   </style>
 </head>
 <body>
   <!-- Navbar -->
 <div class="navbar" id="navbar">
-
   <div class="dropdown">
      <button class="dropbtn">☰
   <i class="fa fa-caret-down"></i>
@@ -93,64 +92,83 @@ hr {
 
 </div>
 
-  <h2 style="color:Brown;text-align: center;font-family: "Courier New", Courier, monospace;">FAQ's</h2>
+  <h2 style="color:Brown;text-align: center;font-family: 'Courier New', Courier, monospace;">FAQ's</h2>
 <hr>
-  <!-- Help Sections -->
-  <div class="help-section">
-    <button type="button" class="collapsible"><b>How do I place an order?</b></button>
-    <div class="content">
-     <b> <p>To place an order, visit our <a href="Shop_now.html"><b>Shop Now</b></a> page and note the product number or name. You can also refer to our Instagram page.<br>Next click the <a href="https://forms.gle/ZoKD24cb8btnorFQ7"><b>Order Now</b></a> button. <br>A form will open; fill all the necessary detail.
-<br>
-<br>
-You could also contact +919822057188 or knittingnestshopnow@gmail.com for customized orders or for any queries.</p>
-    </div>
-  </div>
-
-  <div class="help-section">
-    <button type="button" class="collapsible"><b>What payment methods do you accept?</b></button>
-    <div class="content">
-      <p>We accept Phone pay, G-pay, and cash depending on the order.</p>
-    </div>
-  </div>
-
-  <div class="help-section">
-    <button type="button" class="collapsible"><b>How can I get customized orders?</b></button>
-    <div class="content">
-      <p>For customized orders, you can either mention the request in the section of the order form or, reach out to us either via email (<a href="mailto:knittingnestshopnow@gmail.com" target="_top">knittingnestshopnow@gmail.com</a>) or phone (+919822057188). </p>
-    </div>
-  </div>
-  <div class="help-section">
-    <button type="button" class="collapsible"><b>Can I customize the color/design of my product?</b></button>
-    <div class="content">
-      <p>Yes, we offer customization options for certain products, and if you have any other certain requests you can mention them and we will do our be to carry out them.  Please contact us to inquire about customization possibilities for the specific item you're interested in or mention them in the form. We will provide you with further details and assist you in creating a personalized order.</p>
-    </div>
-  </div>
+ <!-- Help Sections -->
 <div class="help-section">
-    <button type="button" class="collapsible"><b>How long do the orders take to be delivered?</b></button>
-    <div class="content">
-      <p>The delivery time for your order may vary depending on factors such as your location, type of item, the shipping method selected, and material availability. Typically, orders are processed and dispatched within 2 to 3 weeks. Once dispatched, you will be informed via email or WhatsApp.</p>
-    </div>
+  <!-- Collapsible Button for FAQ -->
+  <button type="button" class="collapsible"><b>How do I place an order?</b></button>
+  <!-- Content Section for FAQ -->
+  <div class="content">
+    <!-- Explanation for placing an order -->
+    <p>To place an order, visit our <a href="Shop_now.html"><b>Shop Now</b></a> page and note the product number or name. You can also refer to our Instagram page. Next click the <a href="https://forms.gle/ZoKD24cb8btnorFQ7"><b>Order Now</b></a> button. A form will open; fill all the necessary detail. You could also contact +919822057188 or knittingnestshopnow@gmail.com for customized orders or for any queries.</p>
   </div>
+</div>
+
 <div class="help-section">
-    <button type="button" class="collapsible"><b>How do I get the details of my orders?</b></button>
-    <div class="content">
-      <p>Once you place your order via the form, we will get back to you we a confirmation message. You will be informed when the products are dispatched or if any further details are required.</p>
-    </div>
+  <!-- Collapsible Button for payment methods -->
+  <button type="button" class="collapsible"><b>What payment methods do you accept?</b></button>
+  <!-- Content Section for payment methods -->
+  <div class="content">
+    <!-- Explanation for accepted payment methods -->
+    <p>We accept Phone pay, G-pay, and cash depending on the order.</p>
   </div>
-</b>
+</div>
+
+<div class="help-section">
+  <!-- Collapsible Button for customized orders -->
+  <button type="button" class="collapsible"><b>How can I get customized orders?</b></button>
+  <!-- Content Section for customized orders -->
+  <div class="content">
+    <!-- Explanation for getting customized orders -->
+    <p>For customized orders, you can either mention the request in the section of the order form or reach out to us either via email (<a href="mailto:knittingnestshopnow@gmail.com" target="_top">knittingnestshopnow@gmail.com</a>) or phone (+919822057188).</p>
+  </div>
+</div>
+
+<div class="help-section">
+  <!-- Collapsible Button for customization options -->
+  <button type="button" class="collapsible"><b>Can I customize the color/design of my product?</b></button>
+  <!-- Content Section for customization options -->
+  <div class="content">
+    <!-- Explanation for customization options -->
+    <p>Yes, we offer customization options for certain products. If you have any other specific requests, you can mention them, and we will do our best to fulfill them. Please contact us to inquire about customization possibilities for the specific item you're interested in or mention them in the form. We will provide you with further details and assist you in creating a personalized order.</p>
+  </div>
+</div>
+
+<div class="help-section">
+  <!-- Collapsible Button for delivery time -->
+  <button type="button" class="collapsible"><b>How long do the orders take to be delivered?</b></button>
+  <!-- Content Section for delivery time -->
+  <div class="content">
+    <!-- Explanation for delivery time -->
+    <p>The delivery time for your order may vary depending on factors such as your location, type of item, the shipping method selected, and material availability. Typically, orders are processed and dispatched within 2 to 3 weeks. Once dispatched, you will be informed via email or WhatsApp.</p>
+  </div>
+</div>
+
+<div class="help-section">
+  <!-- Collapsible Button for order details -->
+  <button type="button" class="collapsible"><b>How do I get the details of my orders?</b></button>
+  <!-- Content Section for order details -->
+  <div class="content">
+    <!-- Explanation for getting order details -->
+    <p>Once you place your order via the form, we will get back to you with a confirmation message. You will be informed when the products are dispatched or if any further details are required.</p>
+  </div>
+</div>
+
   <!-- Footer -->
   <footer class="footer">
-  <div class="contact-info">
-    <b><p style="color:#4b63cc;">Email:</p></b><p><a href="mailto:knittingnestshopnow@gmail.com" target="_top"> knittingnestshopnow@gmail.com</p></a>
-    <b><p style="color:#4b63cc;">Phone:</p></b><p style="color:#f33a91;"> +919822057188</p>
-  </div>
-  <div class="copyright">
-
-    <p>Coded by <a href="About_Us.html">Claire & Grace Fernandes</a></p>
-    <p>&copy; 2023 Knitting Nest. All rights reserved.</p>
-<br>
-  </div>
-</footer>
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <b><p style="color:#4b63cc;">Email:</p></b><p><a href="mailto:knittingnestshopnow@gmail.com" target="_top"> knittingnestshopnow@gmail.com</p></a>
+      <b><p style="color:#4b63cc;">Phone:</p></b><p style="color:#f33a91;"> +919822057188</p>
+    </div>
+    <!-- Copyright Information -->
+    <div class="copyright">
+      <p>Coded by <a href="About_Us.html">Claire & Grace Fernandes</a></p>
+      <p>&copy; 2023 Knitting Nest. All rights reserved.</p>
+      <br>
+    </div>
+  </footer>
 
 
   <!-- Scroll-to-top button -->
@@ -158,6 +176,7 @@ You could also contact +919822057188 or knittingnestshopnow@gmail.com for custom
 
   <!-- Script for collapsible sections and scroll-to-top button -->
   <script>
+    // JavaScript for collapsible sections
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -173,7 +192,7 @@ You could also contact +919822057188 or knittingnestshopnow@gmail.com for custom
       });
     }
 
-    // When the user scrolls down 20px from the top of the document, show the button
+    // JavaScript for scroll-to-top button
     window.onscroll = function() {scrollFunction()};
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -183,7 +202,6 @@ You could also contact +919822057188 or knittingnestshopnow@gmail.com for custom
       }
     }
 
-    // When the user clicks on the button, scroll to the top of the document
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
